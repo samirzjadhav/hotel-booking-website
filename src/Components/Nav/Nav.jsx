@@ -8,7 +8,7 @@ import "react-datepicker/dist/react-datepicker.css";
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isModalOpen, setModalOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const [checkInDate, setIsDate] = useState(null);
   const [checkOutDate, setCheckOutDate] = useState(null);
 
@@ -39,13 +39,78 @@ const Nav = () => {
           <li>
             <Link
               to="/"
-              className="upeercase text-base opacity-70 hover:opacity-100 md:opacity-100 transition px-4 py-2 lg:py-0"
+              className="upeercase text-base opacity-70 hover:opacity-100 md:opacity-100 transition px-4 py-2 lg:px-0 lg:py-0"
             >
               Home
             </Link>
-            <Link>hiiew</Link>
+          </li>
+          <li>
+            <Link
+              to="/"
+              className="upeercase text-base opacity-70 hover:opacity-100 md:opacity-100 transition px-4 py-2 lg:px-0 lg:py-0"
+            >
+              About
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/"
+              className="upeercase text-base opacity-70 hover:opacity-100 md:opacity-100 transition px-4 py-2 lg:px-0 lg:py-0"
+            >
+              Services
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/"
+              className="upeercase text-base opacity-70 hover:opacity-100 md:opacity-100 transition px-4 py-2 lg:px-0 lg:py-0"
+            >
+              Rooms
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/"
+              className="upeercase text-base opacity-70 hover:opacity-100 md:opacity-100 transition px-4 py-2 lg:px-0 lg:py-0"
+            >
+              Blog
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/"
+              className="upeercase text-base opacity-70 hover:opacity-100 md:opacity-100 transition px-4 py-2 lg:px-0 lg:py-0"
+            >
+              Contact
+            </Link>
           </li>
         </ul>
+        {/* RIGHT SIDE BUTTONS  */}
+        <div className="flex items-center gap-3">
+          <button className="btn custom-btn bg-[#ecb934] flex items-center  px-4 py-4 lg:px-16 lg:py-16  rounded-full gap-3 text-white uppercase tracking-widest">
+            <img
+              src={bookmark}
+              alt="bookmark"
+              className="invert brightness-0"
+            />
+            <span className="hidden lg:block">Book Now</span>
+          </button>
+          {/* Mobile Menu Toggle */}
+          <div className="lg:hidden block">
+            <button onClick={() => setIsOpen(!isOpen)}>
+              <i
+                className={`ri-menu-line text-4xl transition ${
+                  isOpen ? "hidden" : "block"
+                }`}
+              ></i>
+              <i
+                className={`ri-menu-line text-4xl transition ${
+                  isOpen ? "block" : "hidden"
+                }`}
+              ></i>
+            </button>
+          </div>
+        </div>
       </nav>
     </>
   );

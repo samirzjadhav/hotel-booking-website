@@ -1,5 +1,5 @@
-@import "tailwindcss";
 @import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Outfit:wght@100..900&display=swap");
+@import "tailwindcss";
 
 * {
   margin: 0;
@@ -7,6 +7,7 @@
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
+  font-family: var(--Outfit-font);
 }
 
 :root {
@@ -21,9 +22,64 @@
   --Outfit-font: "Outfit", sans-serif;
 
   --transition-regular: 0.3s;
-  --trasition-slow: 0.6s;
+  --transition-slow: 0.6s;
 }
 
 h1,
-h2 {
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--Bricolage-font);
+  color: var(--text-color);
+}
+
+p {
+  color: var(--text-light);
+}
+
+html {
+  overflow-x: hidden;
+}
+
+.logo {
+  /* @apply font-bricolge; */
+}
+
+.logo span {
+  /* @apply font-bricolage; */
+  color: var(--secondary-color);
+}
+
+.custom-btn {
+  padding: 10px 20px 10px 20px;
+}
+
+.navbar {
+  box-shadow: 0 4px 20px rgba(32, 79, 94, 0.5);
+}
+
+.menu {
+  transition: var(--transition-regular) !important;
+}
+
+.menu li a {
+  position: relative;
+  z-index: 1;
+  padding: 20px 10px;
+  display: inline-block;
+  color: var(--text-color);
+  transition: var(--transition-regular);
+}
+
+.menu li a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 40px;
+  background-color: #fff;
 }
