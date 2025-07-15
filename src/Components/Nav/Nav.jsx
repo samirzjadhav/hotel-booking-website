@@ -33,13 +33,13 @@ const Nav = () => {
         {/* Menu */}
         <ul
           className={`menu flex-col lg:flex-row lg:flex absolute lg:static top-full left-0 w-full lg:w-auto bg-white md:py-4 ms:pl-5 lg:bg-transparent z-50 transition-all duration-300 ease-in-out overflow-hidden ${
-            isOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0 "
+            isOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-100 "
           } lg:max-h-full lg-opacity-100 gap-10 text-sm font-medium  `}
         >
           <li>
             <Link
               to="/"
-              className="upeercase text-base opacity-70 hover:opacity-100 md:opacity-100 transition px-4 py-2 lg:px-0 lg:py-0"
+              className="uppercase text-base opacity-70 hover:opacity-100 md:opacity-100 transition px-4 py-2 lg:px-0 lg:py-0"
             >
               Home
             </Link>
@@ -47,7 +47,7 @@ const Nav = () => {
           <li>
             <Link
               to="/"
-              className="upeercase text-base opacity-70 hover:opacity-100 md:opacity-100 transition px-4 py-2 lg:px-0 lg:py-0"
+              className="uppercase text-base opacity-70 hover:opacity-100 md:opacity-100 transition px-4 py-2 lg:px-0 lg:py-0"
             >
               About
             </Link>
@@ -55,7 +55,7 @@ const Nav = () => {
           <li>
             <Link
               to="/"
-              className="upeercase text-base opacity-70 hover:opacity-100 md:opacity-100 transition px-4 py-2 lg:px-0 lg:py-0"
+              className="uppercase text-base opacity-70 hover:opacity-100 md:opacity-100 transition px-4 py-2 lg:px-0 lg:py-0"
             >
               Services
             </Link>
@@ -63,7 +63,7 @@ const Nav = () => {
           <li>
             <Link
               to="/"
-              className="upeercase text-base opacity-70 hover:opacity-100 md:opacity-100 transition px-4 py-2 lg:px-0 lg:py-0"
+              className="uppercase text-base opacity-70 hover:opacity-100 md:opacity-100 transition px-4 py-2 lg:px-0 lg:py-0"
             >
               Rooms
             </Link>
@@ -71,7 +71,7 @@ const Nav = () => {
           <li>
             <Link
               to="/"
-              className="upeercase text-base opacity-70 hover:opacity-100 md:opacity-100 transition px-4 py-2 lg:px-0 lg:py-0"
+              className="uppercase text-base opacity-70 hover:opacity-100 md:opacity-100 transition px-4 py-2 lg:px-0 lg:py-0"
             >
               Blog
             </Link>
@@ -79,7 +79,7 @@ const Nav = () => {
           <li>
             <Link
               to="/"
-              className="upeercase text-base opacity-70 hover:opacity-100 md:opacity-100 transition px-4 py-2 lg:px-0 lg:py-0"
+              className="uppercase text-base opacity-70 hover:opacity-100 md:opacity-100 transition px-4 py-2 lg:px-0 lg:py-0"
             >
               Contact
             </Link>
