@@ -87,7 +87,10 @@ const Nav = () => {
         </ul>
         {/* RIGHT SIDE BUTTONS  */}
         <div className="flex items-center gap-3">
-          <button className="btn custom-btn bg-[#ecb934] flex items-center  px-4 py-4 lg:px-16 lg:py-16  rounded-full gap-3 text-white uppercase tracking-widest">
+          <button
+            onClick={() => setIsModalOpen(true)}
+            className="btn custom-btn bg-[#ecb934] flex items-center  px-4 py-4 lg:px-16 lg:py-16  rounded-full gap-3 text-white uppercase tracking-widest"
+          >
             <img
               src={bookmark}
               alt="bookmark"
@@ -109,6 +112,65 @@ const Nav = () => {
                 }`}
               ></i>
             </button>
+
+            {/* Modal form */}
+            {isModalOpen && (
+              <div className="fixed nav-form inset-0 z-[999] flex items-center justify-center bg-[rgba(32,79,94,.9)] ">
+                <div className="bg-white w-full max-w-[500px] p-[40px] rounded-[15px] shadow-lg relative">
+                  <button
+                    onClick={() => setIsModalOpen(false)}
+                    className="absolute hover:bg-[#ecb9234] hover:text-white transition duration-300 top-4 right-4 rounded-[50%] w-[50px] text-xl text-black font-bold bg-[#eafbfb]"
+                  >
+                    <span className="bi bi-x-lg"></span>
+                  </button>
+                  <h2 className="text-3xl font-semibold mb-12">Search</h2>
+                  <form action="" className="space-y-10">
+                    <div className="md-10 relative">
+                      <label className="block text-sm font-[500] text-[#204f5e] tracking-widest uppercase mb-2">
+                        check-in
+                      </label>
+                      <DatePicker
+                        selected={checkInDate}
+                        onChange={(date) => setCheckInDate(date)}
+                        placeholderText="Select Check-in Date"
+                        className="w-full p-3 h-[60px] bg-[#eafbfb] rounded border border-[#d5f1f1] outline-none"
+                        dateFormat="dd/mm/yyyy"
+                      >
+                        .ri-calender-line
+                      </DatePicker>
+                    </div>
+                    <div className="md-10 relative">
+                      <label className="block text-sm font-[500] text-[#204f5e] tracking-widest uppercase mb-2">
+                        check-out
+                      </label>
+                      <DatePicker
+                        selected={checkOutDate}
+                        onChange={(date) => setCheckOutDate(date)}
+                        placeholderText="Select Check-out Date"
+                        className="w-full p-3 h-[60px] bg-[#eafbfb] rounded border border-[#d5f1f1] outline-none"
+                        dateFormat="dd/mm/yyyy"
+                      >
+                        .ri-calender-line
+                      </DatePicker>
+                    </div>
+                    <div className="md-10 relative">
+                      <label className="block text-sm font-[500] text-[#204f5e] tracking-widest uppercase mb-2">
+                        adults
+                      </label>
+                      <input
+                        type="number"
+                        placeholder="0"
+                        min="1"
+                        className=" w-full p-3 h-[60px] bg-[#eafbdb] rounded border border-[#d5f1f1] outline-none mb-10"
+                      />
+                    </div>
+                    <button className="bg-sky-400 text-white py-3 px-5 rounded-full w-full uppwercase tracking-wideset">
+                      Search
+                    </button>
+                  </form>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </nav>
