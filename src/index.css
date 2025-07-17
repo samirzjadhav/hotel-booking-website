@@ -1,6 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Outfit:wght@100..900&display=swap");
 @import "tailwindcss";
 
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    font-family: sans-serif;
+    color: #333;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -90,4 +108,16 @@ html {
 
 .menu li:hover a::after {
   opacity: 1;
+}
+
+/* For Chrome, Safari, Edge, Opera */
+.no-spinner::-webkit-outer-spin-button,
+.no-spinner::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* For Firefox */
+.no-spinner {
+  -moz-appearance: textfield;
 }
