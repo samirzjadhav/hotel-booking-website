@@ -111,13 +111,31 @@ html {
 }
 
 /* For Chrome, Safari, Edge, Opera */
-.no-spinner::-webkit-outer-spin-button,
+/* .no-spinner::-webkit-outer-spin-button,
 .no-spinner::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
-}
+} */
 
 /* For Firefox */
-.no-spinner {
+/* .no-spinner {
   -moz-appearance: textfield;
+} */
+
+.nav-form input {
+  border: 4px solid var(--primary-light);
+  background-color: var(--primary-light);
+  position: relative;
+}
+
+.nav-form i {
+  position: absolute;
+  top: 45px;
+  right: 20px;
+  font-size: 1.1rem;
+  color: var(--primary-color);
+}
+
+.nav-form .react-datepicker-wrapper {
+  width: 100% !important;
 }

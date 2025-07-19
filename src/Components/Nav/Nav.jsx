@@ -113,11 +113,11 @@ const Nav = () => {
 
           {/* Modal */}
           {isModalOpen && (
-            <div className="fixed inset-0 z-[999] flex items-center justify-center bg-[rgba(32,79,94,.9)]">
+            <div className="fixed nav-form inset-0 z-[999] flex items-center justify-center bg-[rgba(32,79,94,.9)]">
               <div className="bg-white w-full max-w-[500px] !p-[40px] rounded-[15px] shadow-lg relative">
                 <button
                   onClick={() => setIsModalOpen(false)}
-                  className="absolute hover:bg-[#ecb934] hover:text-white transition duration-300 top-4 right-4 rounded-full w-[50px] text-xl text-black font-bold bg-[#eafbfb]"
+                  className="absolute hover:bg-[#ecb934] hover:text-white transition duration-300 top-4 right-4 rounded-full w-[50px] h-[50px] text-xl text-black font-bold bg-[#eafbfb]"
                 >
                   ✕
                 </button>
@@ -133,11 +133,10 @@ const Nav = () => {
                       placeholderText="Select Check-in Date"
                       className="w-full !p-3 h-[60px] bg-[#eafbfb] rounded border border-[#d5f1f1] outline-none"
                       dateFormat="dd/MM/yyyy"
-                    >
-                      <i className="ri-calender-line"></i>
-                    </DatePicker>
+                    ></DatePicker>
+                    <i className="ri-calendar-line"></i>
                   </div>
-                  <div className="!mt-10 relative">
+                  <div className="!mb-10 relative">
                     <label className="block text-sm font-[500] text-[#204f5e] tracking-widest uppercase !mb-2">
                       Check-out
                     </label>
@@ -147,11 +146,10 @@ const Nav = () => {
                       placeholderText="Select Check-out Date"
                       className="w-full !p-3 h-[60px] bg-[#eafbfb] rounded border border-[#d5f1f1] outline-none"
                       dateFormat="dd/MM/yyyy"
-                    >
-                      <i className="ri-calendar-line"></i>
-                    </DatePicker>
+                    ></DatePicker>
+                    <i className="ri-calendar-line"></i>
                   </div>
-                  <div className="!mt-10 relative">
+                  <div className="!mb-10 relative">
                     <label className="block text-sm font-[500] text-[#204f5e] tracking-widest uppercase !mb-2">
                       Adults
                     </label>
@@ -159,7 +157,7 @@ const Nav = () => {
                       type="number"
                       placeholder="0"
                       min="1"
-                      className="w-full !p-3 h-[60px] bg-[#eafbfb] rounded border border-[#d5f1f1] outline-none  no-spinner"
+                      className="w-full !p-3 h-[60px] bg-[#eafbfb] rounded border border-[#d5f1f1] !outline-none  no-spinner"
                     />
                   </div>
                   <button
