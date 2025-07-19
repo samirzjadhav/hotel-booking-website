@@ -46,7 +46,7 @@ const Nav = () => {
           </li>
           <li>
             <Link
-              to="/"
+              to="/about"
               className="uppercase text-base opacity-70 hover:opacity-100 md:opacity-100 transition px-4 py-2 lg:px-0 lg:py-0"
             >
               About
@@ -54,7 +54,7 @@ const Nav = () => {
           </li>
           <li>
             <Link
-              to="/"
+              to="/sevices"
               className="uppercase text-base opacity-70 hover:opacity-100 md:opacity-100 transition px-4 py-2 lg:px-0 lg:py-0"
             >
               Services
@@ -62,7 +62,7 @@ const Nav = () => {
           </li>
           <li>
             <Link
-              to="/"
+              to="/rooms"
               className="uppercase text-base opacity-70 hover:opacity-100 md:opacity-100 transition px-4 py-2 lg:px-0 lg:py-0"
             >
               Rooms
@@ -70,7 +70,7 @@ const Nav = () => {
           </li>
           <li>
             <Link
-              to="/"
+              to="/blogs"
               className="uppercase text-base opacity-70 hover:opacity-100 md:opacity-100 transition px-4 py-2 lg:px-0 lg:py-0"
             >
               Blog
@@ -78,7 +78,7 @@ const Nav = () => {
           </li>
           <li>
             <Link
-              to="/"
+              to="/contact"
               className="uppercase text-base opacity-70 hover:opacity-100 md:opacity-100 transition px-4 py-2 lg:px-0 lg:py-0"
             >
               Contact
