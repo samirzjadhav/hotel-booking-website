@@ -22,7 +22,7 @@ const Nav = () => {
     <>
       {/* Navbar */}
       <nav
-        className={`bg-white px-[8%] h-[100px] w-full  fixed top-5 left-0  lg:left-10 rounded-2xl lg:w-[95%] flex justify-between items-center z-[9999] transition-all duration-300 ${
+        className={`navbar bg-white !px-[3%] h-[100px] w-full  fixed top-5 left-0  lg:left-10 rounded-2xl lg:w-[95%] flex justify-between items-center z-[9999] transition-all duration-300 ${
           isScrolled ? "bg-[#11111] shadow-sm" : "bg-transparent"
         } `}
       >
@@ -97,7 +97,7 @@ const Nav = () => {
               alt="bookmark"
               className="invert brightness-0"
             />
-            <span className="hidden lg:block">Book Now</span>
+            <span className="hidden xl:block">Book Now</span>
           </button>
 
           {/* Mobile Menu Toggle */}

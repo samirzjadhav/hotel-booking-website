@@ -139,3 +139,19 @@ html {
 .nav-form .react-datepicker-wrapper {
   width: 100% !important;
 }
+
+@media screen and(max-width:1400px) {
+  .navbar {
+    padding: 20px 2%;
+  }
+}
+
+@media screen and(max-width:1200px) {
+  .navbar {
+    padding: 20px 4%;
+  }
+
+  .menu {
+    line-height: 3.25rem;
+  }
+}
