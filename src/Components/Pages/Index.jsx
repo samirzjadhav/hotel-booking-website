@@ -26,14 +26,14 @@ const Index = () => {
   return (
     <>
       <div className="hero w-full lg:!px-[12%] !px-[8%] !py-[150px] flex items-center justify-center">
-        <div className="relative input-box">
+        <div className="hero-content w-full flex flex-col z-9 relative gap-4">
           <span className="text-[#204f5e] bg-[#d5f1f1] w-fit !py-1 !px-3 rounded-full text-sm lg:text-base">
             Welcome Friend
           </span>
           <h1 className="text-3xl sm:text-5xl xl:text-7xl font-[600] !mb-5">
             Wandering the world <br /> is living a story untold.
           </h1>
-          <form className="w-full flex items-center gap-2 bg-white contact-form !p-2">
+          <form className="w-full flex items-center gap-2 bg-white contact-form lg:!p-2 sm:!p-6">
             <div className="relative input-box">
               <label className="block text-sm font-[500] text-[#204f5e] tracking-widest uppercase !mb-2">
                 Check-in
@@ -42,7 +42,7 @@ const Index = () => {
                 selected={checkInDate}
                 onChange={(date) => setCheckInDate(date)}
                 placeholderText="Select Check-in Date"
-                className="w-auto xl-w-[350px] !p-3 h-[60px] bg-[#eafbfb] rounded border border-[#d5f1f1] outline-none"
+                className="w-auto xl:w-[350px] !p-3 h-[60px] bg-[#eafbfb] rounded border border-[#d5f1f1] outline-none"
                 dateFormat="dd/MM/yyyy"
               ></DatePicker>
               <i className="ri-calendar-line"></i>
@@ -55,7 +55,7 @@ const Index = () => {
                 selected={checkOutDate}
                 onChange={(date) => setCheckOutDate(date)}
                 placeholderText="Select Check-out Date"
-                className="w-auto xl-w-[350px] !p-3 h-[60px] bg-[#eafbfb] rounded border border-[#d5f1f1] outline-none"
+                className="w-auto xl:w-[350px] !p-3 h-[60px] bg-[#eafbfb] rounded border border-[#d5f1f1] outline-none"
                 dateFormat="dd/MM/yyyy"
               ></DatePicker>
               <i className="ri-calendar-line"></i>
@@ -68,17 +68,17 @@ const Index = () => {
                 type="number"
                 placeholder="0"
                 min="1"
-                className="w-auto xl-w-[350px] !p-3 h-[60px] bg-[#eafbfb] rounded border border-[#d5f1f1] !outline-none  no-spinner"
+                className="w-auto xl:w-[350px] !p-3 h-[60px] bg-[#eafbfb] rounded border border-[#d5f1f1] !outline-none  no-spinner"
               />
             </div>
             <button
               type="submit"
               className="bg-sky-400 text-white rounded-full text-2xl w-xl-[100px] h-xl-[100px] w-[80px] h-[80px]"
             >
-              <i className="bi bi-search"></i>
+              <span className="bi bi-search"></span>
             </button>
           </form>
-          <p className="text-[#5a8695] text-base">
+          <p className="text-[#5a8695] text-base !mt-2">
             Discover unforgettable places, meet amazing people, and collect
             memories that last a lifetime. Your journey begins here.
           </p>
