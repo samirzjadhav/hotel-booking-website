@@ -84,6 +84,59 @@ const Index = () => {
           </p>
         </div>
       </div>
+
+      <div className="service w-full lg:!px-[12%] !px-[8%] !py-[150px] flex items-center flex-col justify-center gap-20">
+        <div className="section-title text-center w-full space-y-4">
+          <span className="bg-[#d5f1f1] rounded-full px-5 py-2 font-bricolage tracking-wider text-sm uppercase">
+            service
+          </span>
+          <h1 className="text-5xl font-semibold">
+            discover the touch of nature
+          </h1>
+        </div>
+        <div className="service-wrapper grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 md:gap-6 lg:gap-10 w-full">
+          <div className="service-item relative rounded-lg overflow-hidden">
+            <img
+              src={service1}
+              alt="service-image"
+              className="w-full h-[250px] object-cover rounded-lg"
+            />
+            <span className="absolute bottom-5 left-1/2 tranform -translate-x-1/2 bg-white text-center rounded-full !py-1 text-sm font-medium text-[#204f5e] tracking-widest uppercase w-[90%] max-w-[250px]">
+              surfing
+            </span>
+          </div>
+          <div className="service-item relative rounded-lg overflow-hidden">
+            <img
+              src={service2}
+              alt="service-image"
+              className="w-full h-[250px] object-cover rounded-lg"
+            />
+            <span className="absolute bottom-5 left-1/2 transform -translate-x-1/2 bg-white text-center rounded-full py-1 text-sm font-medium text-[#204f5e] tracking-widest uppercase w-[90%] max-w-[250px]">
+              Beach vacation
+            </span>
+          </div>
+          <div className="service-item relative rounded-lg overflow-hidden">
+            <img
+              src={service3}
+              alt="service-image"
+              className="w-full h-[250px] object-cover rounded-lg"
+            />
+            <span className="absolute bottom-5 left-1/2 transform -translate-x-1/2 bg-white text-center rounded-full py-1 text-sm font-medium text-[#204f5e] tracking-widest uppercase w-[90%] max-w-[250px]">
+              Beach restaurant
+            </span>
+          </div>
+          <div className="service-item relative rounded-lg overflow-hidden">
+            <img
+              src={service4}
+              alt="service-image"
+              className="w-full h-[250px] object-cover rounded-lg"
+            />
+            <span className="absolute bottom-5 left-1/2 transform -translate-x-1/2 bg-white text-center rounded-full py-1 text-sm font-medium text-[#204f5e] tracking-widest uppercase w-[90%] max-w-[250px]">
+              Swimming pools
+            </span>
+          </div>
+        </div>
+      </div>
     </>
   );
 };
