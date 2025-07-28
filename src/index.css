@@ -209,3 +209,36 @@ html {
     width: 100%;
   }
 }
+
+/* service */
+
+.service-item {
+  height: 450px;
+  border: 10px solid var(--white-color);
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(32, 79, 94, 0.05);
+  transition: var(--transition-slow);
+}
+
+.service-item img {
+  width: 100%;
+  height: 100%;
+}
+
+.service-item:hover img {
+  transform: scale(1.1);
+}
+
+.service-item img {
+  transition: var(--transition-slow);
+}
+
+.service-wrapper .service-item:nth-of-type(even) {
+  transform: translateY(50px);
+}
+
+@media screen and (max-width: 768px) {
+  .service-wrapper .service-item:nth-of-type(even) {
+    transform: translateY(0px);
+  }
+}

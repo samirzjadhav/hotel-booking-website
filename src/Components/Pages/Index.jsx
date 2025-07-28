@@ -87,7 +87,7 @@ const Index = () => {
 
       <div className="service w-full lg:!px-[12%] !px-[8%] !py-[150px] flex items-center flex-col justify-center gap-20">
         <div className="section-title text-center w-full space-y-4">
-          <span className="bg-[#d5f1f1] rounded-full px-5 py-2 font-bricolage tracking-wider text-sm uppercase">
+          <span className="bg-[#d5f1f1] rounded-full !px-5 !py-2 font-bricolage tracking-wider text-sm uppercase">
             service
           </span>
           <h1 className="text-5xl font-semibold">
