@@ -136,15 +136,130 @@ const Index = () => {
             </span>
           </div>
         </div>
-        <div className="service-bottom mt-20 w-full flex lg:flex-row flex-col justify-between items-center lg:text-start text-center gap-5">
+        <div className="service-bottom !mt-20 w-full flex lg:flex-row flex-col justify-between items-center lg:text-start text-center gap-5">
           <p className="lg:w-1/2">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, iusto
-            eveniet, quaerat ea, provident perferendis excepturi repellendus
-            voluptatem eum expedita aperiam harum tempore reprehenderit alias!
+            Every destination holds a secret, every journey writes a new
+            chapter. Step into a world of stories, memories, and
+            discovery—crafted just for you.
           </p>
           <button className="w-[200px] tracking-[2px] h-[60px] bg-[#ecb934] transition hover:bg-[#ffca44] rounded-full text-white uppercase">
             read me
           </button>
+        </div>
+      </div>
+
+      <div className="features bg-[#f3fdfd] w-full lg:!px-[12%] !px-[8%] !py-[150px] flex flex-col items-center justify-center gap-20 z-[999] relative overflow-hidden">
+        <div className="section-title text-center w-full space-y-4">
+          <span className="bg-[#d5f1f1] rounded-full !px-5 !py-2 font-bricolage tracking-wider text-sm uppercase">
+            features
+          </span>
+          <h1 className="text-5xl font-semibold !mt-5">
+            Feature that will make your vacation inforgettable
+          </h1>
+        </div>
+        <div className="feature-wrapper grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-10 z-[9]">
+          <div
+            className="features-item bg-white rounded-xl !py-14 !px-5"
+            style={{ boxShadow: "0px 4px 20px rgba(32,79,94,.05" }}
+          >
+            <img
+              src={feature1}
+              alt="feature-img"
+              className="bg-[#eafbfb] text-[#23bcec] h-[80px] w-[80px] !py-5 !px-5 rounded-lg"
+            />
+            <h3 className="!mt-12 xl:text-3xl text-2xl !mb-4 font-semibold">
+              Benchfront Location
+            </h3>
+            <p className="font-light">
+              our hotel is situated right on the beach, offering stunning ocen
+              views and immediate access to the sandy shores
+            </p>
+          </div>
+          <div
+            className="features-item bg-white rounded-xl !py-14 !px-5"
+            style={{ boxShadow: "0px 4px 20px rgba(32,79,94,.05" }}
+          >
+            <img
+              src={feature2}
+              alt="feature-img"
+              className="bg-[#eafbfb] text-[#23bcec] h-[80px] w-[80px] !py-5 !px-5 rounded-lg"
+            />
+            <h3 className="!mt-12 xl:text-3xl text-2xl !mb-4 font-semibold">
+              Luxury Accommodations
+            </h3>
+            <p className="font-light">
+              Experience comfort and style in our well-appointed rooms and
+              suites, designed for a relaxing stay.
+            </p>
+          </div>
+          <div
+            className="features-item bg-white rounded-xl !py-14 !px-5"
+            style={{ boxShadow: "0px 4px 20px rgba(32,79,94,.05" }}
+          >
+            <img
+              src={feature3}
+              alt="feature-img"
+              className="bg-[#eafbfb] text-[#23bcec] h-[80px] w-[80px] !py-5 !px-5 rounded-lg"
+            />
+            <h3 className="!mt-12 xl:text-3xl text-2xl !mb-4 font-semibold">
+              On-Site Dinning
+            </h3>
+            <p className="font-light">
+              enjoy a variety of culinary delights at our on-site restaurants,
+              catering to different tastes and preferences.
+            </p>
+          </div>
+          <div
+            className="features-item bg-white rounded-xl !py-14 !px-5"
+            style={{ boxShadow: "0px 4px 20px rgba(32,79,94,.05" }}
+          >
+            <img
+              src={feature4}
+              alt="feature-img"
+              className="bg-[#eafbfb] text-[#23bcec] h-[80px] w-[80px] !py-5 !px-5 rounded-lg"
+            />
+            <h3 className="!mt-12 xl:text-3xl text-2xl !mb-4 font-semibold">
+              Recreational Facilities
+            </h3>
+            <p className="font-light">
+              Our hotel offers a range of recreational activities, including
+              water sports, swimming pools, and fitness center
+            </p>
+          </div>
+          <div
+            className="features-item bg-white rounded-xl !py-14 !px-5"
+            style={{ boxShadow: "0px 4px 20px rgba(32,79,94,.05" }}
+          >
+            <img
+              src={feature5}
+              alt="feature-img"
+              className="bg-[#eafbfb] text-[#23bcec] h-[80px] w-[80px] !py-5 !px-5 rounded-lg"
+            />
+            <h3 className="!mt-12 xl:text-3xl text-2xl !mb-4 font-semibold">
+              Spa and Wellness Services
+            </h3>
+            <p className="font-light">
+              Unwind and rejuvenate at our spa, where you can indulge in
+              messages and treatments for ultimate relaxation
+            </p>
+          </div>
+          <div
+            className="features-item bg-white rounded-xl !py-14 !px-5"
+            style={{ boxShadow: "0px 4px 20px rgba(32,79,94,.05" }}
+          >
+            <img
+              src={feature6}
+              alt="feature-img"
+              className="bg-[#eafbfb] text-[#23bcec] h-[80px] w-[80px] !py-5 !px-5 rounded-lg"
+            />
+            <h3 className="!mt-12 xl:text-3xl text-2xl !mb-4 font-semibold">
+              Surfing Leassons
+            </h3>
+            <p className="font-light">
+              Our hotel offers surfing leassons and equipment rentals, allowing
+              guests of all levels to enjoy the thrill of riding the waves
+            </p>
+          </div>
         </div>
       </div>
     </>
