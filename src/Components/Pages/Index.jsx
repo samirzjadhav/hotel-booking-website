@@ -136,6 +136,16 @@ const Index = () => {
             </span>
           </div>
         </div>
+        <div className="service-bottom mt-20 w-full flex lg:flex-row flex-col justify-between items-center lg:text-start text-center gap-5">
+          <p className="lg:w-1/2">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, iusto
+            eveniet, quaerat ea, provident perferendis excepturi repellendus
+            voluptatem eum expedita aperiam harum tempore reprehenderit alias!
+          </p>
+          <button className="w-[200px] tracking-[2px] h-[60px] bg-[#ecb934] transition hover:bg-[#ffca44] rounded-full text-white uppercase">
+            read me
+          </button>
+        </div>
       </div>
     </>
   );
