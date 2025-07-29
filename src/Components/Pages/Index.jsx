@@ -20,9 +20,36 @@ import element1 from "../../assets/element-1.png";
 import element2 from "../../assets/element-2.png";
 import element3 from "../../assets/element-3.png";
 
+import RoomsData from "../../../Rooms.json";
+
+import heroImg from "../../assets/about.png";
+
+import avatar1 from "../../assets/review-1.jpg";
+import avatar2 from "../../assets/review-2.jpg";
+import avatar3 from "../../assets/review-3.jpg";
+import avatar4 from "../../assets/review-4.jpg";
+import avatar5 from "../../assets/review-5.jpg";
+import avatar6 from "../../assets/review-6.jpg";
+
+import blog1 from "../../assets/blog-2.jpg";
+import blog2 from "../../assets/blog-3.jpg";
+import blog3 from "../../assets/blog-4.jpg";
+import blog4 from "../../assets/blog-5.jpg";
+
 const Index = () => {
   const [checkInDate, setCheckInDate] = useState(null);
   const [checkOutDate, setCheckOutDate] = useState(null);
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const [activeTab, setActiveTab] = useState("All");
+
+  const tabs = ["All", "Economy", "Standard", "Luxury"];
+
+  const filteredRooms =
+    activeTab === "All"
+      ? RoomsData
+      : RoomsData.filter((room) => room.type === activeTab);
+
   return (
     <>
       <div className="hero w-full lg:!px-[12%] !px-[8%] !py-[150px] flex items-center justify-center">
@@ -260,6 +287,39 @@ const Index = () => {
               guests of all levels to enjoy the thrill of riding the waves
             </p>
           </div>
+        </div>
+      </div>
+
+      <div className="!py-[80px]">
+        <div className="section-title text-center w-full space-y-4">
+          <span className="bg-[#d5f1f1] rounded-full !px-5 !py-2 font-bricolage tracking-wider text-sm uppercase">
+            rooms
+          </span>
+          <h1 className="text-2xl  sm:text-5xl font-semibold !mt-5 w-full xl:w-[50p%] mx-auto leading-tight">
+            Our Best Rooms
+          </h1>
+        </div>
+      </div>
+      <div className="w-100 lg:!px-[12%] !px-[8%] !pb-[100px]">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+          {filteredRooms.map((rooms) => (
+            <div
+              key={rooms.id}
+              className=" bg-white rounded-2xl shadow-md overflow-hidden show-rooms"
+            >
+              <div className="relative">
+                <Swiper
+                  modules={[Pagination]}
+                  Pagination={{ clickable: true }}
+                  className="w-full h-[280px] custom-swiper"
+                >
+                  {rooms.photos.map((photo)=>{
+                    
+                  })}
+                </Swiper>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </>
