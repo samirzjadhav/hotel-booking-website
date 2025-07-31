@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Swiper, SwiperSlide } from "swiper";
 import { Link } from "react-router-dom";
 
 import DatePicker from "react-datepicker";
@@ -35,6 +36,10 @@ import blog1 from "../../assets/blog-2.jpg";
 import blog2 from "../../assets/blog-3.jpg";
 import blog3 from "../../assets/blog-4.jpg";
 import blog4 from "../../assets/blog-5.jpg";
+
+import swiper from "swiper";
+import { Pagination } from "swiper/module";
+import { swiperslide } from "swiper/react";
 
 const Index = () => {
   const [checkInDate, setCheckInDate] = useState(null);
@@ -313,8 +318,14 @@ const Index = () => {
                   Pagination={{ clickable: true }}
                   className="w-full h-[280px] custom-swiper"
                 >
-                  {rooms.photos.map((photo)=>{
-                    
+                  {rooms.photos.map((photo, index) => {
+                    <SwiperSlide key={index}>
+                      <img
+                        src={photo}
+                        alt={`${rooms.title} ${index + 1}`}
+                        className="w-full h-[280px] object-cover"
+                      />
+                    </SwiperSlide>;
                   })}
                 </Swiper>
               </div>
