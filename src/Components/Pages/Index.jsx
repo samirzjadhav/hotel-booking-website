@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Swiper, SwiperSlide } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
 import { Link } from "react-router-dom";
 
 import DatePicker from "react-datepicker";
@@ -37,9 +37,9 @@ import blog2 from "../../assets/blog-3.jpg";
 import blog3 from "../../assets/blog-4.jpg";
 import blog4 from "../../assets/blog-5.jpg";
 
-import swiper from "swiper";
-import { Pagination } from "swiper/module";
-import { swiperslide } from "swiper/react";
+import { Pagination, Navigation } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
 
 const Index = () => {
   const [checkInDate, setCheckInDate] = useState(null);
@@ -310,23 +310,23 @@ const Index = () => {
           {filteredRooms.map((rooms) => (
             <div
               key={rooms.id}
-              className=" bg-white rounded-2xl shadow-md overflow-hidden show-rooms"
+              className="bg-white rounded-2xl shadow-md overflow-hidden show-rooms"
             >
               <div className="relative">
                 <Swiper
                   modules={[Pagination]}
-                  Pagination={{ clickable: true }}
+                  pagination={{ clickable: true }}
                   className="w-full h-[280px] custom-swiper"
                 >
-                  {rooms.photos.map((photo, index) => {
+                  {rooms.photos.map((photo, index) => (
                     <SwiperSlide key={index}>
                       <img
                         src={photo}
                         alt={`${rooms.title} ${index + 1}`}
                         className="w-full h-[280px] object-cover"
                       />
-                    </SwiperSlide>;
-                  })}
+                    </SwiperSlide>
+                  ))}
                 </Swiper>
               </div>
             </div>
