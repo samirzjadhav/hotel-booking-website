@@ -310,7 +310,7 @@ const Index = () => {
           {filteredRooms.map((rooms) => (
             <div
               key={rooms.id}
-              className="bg-white rounded-2xl shadow-md overflow-hidden show-rooms"
+              className="bg-white rounded-2xl shadow-md overflow-hidden show-rooms "
             >
               <div className="relative">
                 <Swiper
@@ -318,10 +318,10 @@ const Index = () => {
                   pagination={{ clickable: true }}
                   className="w-full h-[280px] custom-swiper"
                 >
-                  {rooms.photos.map((photo, index) => (
+                  {rooms.photo?.map((photo, index) => (
                     <SwiperSlide key={index}>
                       <img
-                        src={photo}
+                        src={`/${photo}`} // ✅ prepend / to load from public/
                         alt={`${rooms.title} ${index + 1}`}
                         className="w-full h-[280px] object-cover"
                       />
