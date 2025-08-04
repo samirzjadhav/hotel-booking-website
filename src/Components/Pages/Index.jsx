@@ -316,14 +316,14 @@ const Index = () => {
                 <Swiper
                   modules={[Pagination]}
                   pagination={{ clickable: true }}
-                  className="w-full h-[280px] custom-swiper"
+                  className=" w-100 h-[280px] custom-swiper"
                 >
                   {rooms.photo?.map((photo, index) => (
                     <SwiperSlide key={index}>
                       <img
                         src={`/${photo}`} // ✅ prepend / to load from public/
                         alt={`${rooms.title} ${index + 1}`}
-                        className="w-full h-[280px] object-cover"
+                        className="w-100 h-[280px] object-cover"
                       />
                     </SwiperSlide>
                   ))}

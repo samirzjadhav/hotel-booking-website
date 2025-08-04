@@ -1,7 +1,7 @@
 [
   {
     "id": "1",
-    "type": "Ecconomy",
+    "type": "Economy",
     "title": "Ocean View",
     "image": "/Images/rooms-1.jpg",
     "discription": "A cozy economy room with stunning views of the ocean. Perfect for couples looking for comfort and affordability near the waves.",
@@ -9,9 +9,9 @@
     "size": "95 ft2",
     "price": 49,
     "photo": [
-      "images/rooms-1.jpg",
-      "images/rooms-1-photo-1.jpg",
-      "images/rooms-1-photo-2.jpg"
+      "Images/rooms-1.jpg",
+      "Images/rooms-1-photo-1.jpg",
+      "Images/rooms-1-photo-2.jpg"
     ]
   },
   {
@@ -24,58 +24,58 @@
     "size": "65 ft2",
     "price": 45,
     "photo": [
-      "images/rooms-2.jpg",
-      "images/rooms-2-photo-1.jpg",
-      "images/rooms-2-photo-2.jpg",
-      "images/rooms-2-photo-3.jpg"
+      "Images/rooms-2.jpg",
+      "Images/rooms-2-photo-1.jpg",
+      "Images/rooms-2-photo-2.jpg",
+      "Images/rooms-2-photo-3.jpg"
     ]
   },
   {
     "id": "3",
     "type": "Standard",
     "title": "Beachfront Bliss",
-    "image": "/images/rooms-3.jpg",
+    "image": "/Images/rooms-3.jpg",
     "discription": "Spacious standard room just steps away from the beach. Ideal for small families or groups seeking comfort and convenience.",
     "Adults": 3,
     "size": "95 ft2",
     "price": 59,
-    "photo": ["images/rooms-3.jpg", "images/rooms-3-photo-1.jpg"]
+    "photo": ["Images/rooms-3.jpg", "Images/rooms-3-photo-1.jpg"]
   },
   {
     "id": "4",
-    "type": "Ecconomy",
+    "type": "Economy",
     "title": "Coastal Retreat",
-    "image": "/images/rooms-4.jpg",
+    "image": "/Images/rooms-4.jpg",
     "discription": "Affordable yet stylish room with coastal charm. Great for couples or friends looking to unwind by the sea.",
     "Adults": 2,
     "size": "105 ft2",
     "price": 99,
-    "photo": ["images/rooms-4.jpg", "images/rooms-4-photo-1.jpg"]
+    "photo": ["Images/rooms-4.jpg", "Images/rooms-4-photo-1.jpg"]
   },
   {
     "id": "5",
     "type": "Luxury",
     "title": "Seaside Hevens",
-    "image": "/images/rooms-5.jpg",
+    "image": "/Images/rooms-5.jpg",
     "discription": "A high-end seaside suite with luxurious furnishings and a serene ambiance. Perfect for those seeking indulgence by the water.",
     "Adults": 3,
     "size": "75 ft2",
     "price": 89,
     "photo": [
-      "images/rooms-5.jpg",
-      "images/rooms-5-photo-1.jpg",
-      "images/rooms-5-photo-2.jpg"
+      "Images/rooms-5.jpg",
+      "Images/rooms-5-photo-1.jpg",
+      "Images/rooms-5-photo-2.jpg"
     ]
   },
   {
     "id": "6",
     "type": "Standard",
     "title": "Tropical Escape",
-    "image": "/images/rooms-6.jpg",
+    "image": "/Images/rooms-6.jpg",
     "discription": "A vibrant room inspired by tropical vibes, ideal for two adults looking to relax and reconnect in a cozy setting.",
     "Adults": 2,
     "size": "50 ft2",
     "price": 39,
-    "photo": ["images/rooms-6.jpg", "images/rooms-6-photo-1.jpg"]
+    "photo": ["Images/rooms-6.jpg", "Images/rooms-6-photo-1.jpg"]
   }
 ]
