@@ -300,12 +300,13 @@ const Index = () => {
           <span className="bg-[#d5f1f1] rounded-full !px-5 !py-2 font-bricolage tracking-wider text-sm uppercase">
             rooms
           </span>
-          <h1 className="text-2xl  sm:text-5xl font-semibold !mt-5 w-full xl:w-[50p%] mx-auto leading-tight">
+          <h1 className="text-2xl  sm:text-5xl font-semibold !mt-5 w-full xl:w-[50%] mx-auto leading-tight">
             Our Best Rooms
           </h1>
         </div>
       </div>
-      <div className="w-100 lg:!px-[12%] !px-[8%] !pb-[100px]">
+
+      <div className="w-full lg:!px-[12%] !px-[8%] !pb-[100px]">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {filteredRooms.map((rooms) => (
             <div
@@ -316,21 +317,101 @@ const Index = () => {
                 <Swiper
                   modules={[Pagination]}
                   pagination={{ clickable: true }}
-                  className=" w-100 h-[280px] custom-swiper"
+                  className="w-full h-[280px] custom-swiper"
                 >
                   {rooms.photo?.map((photo, index) => (
                     <SwiperSlide key={index}>
                       <img
                         src={`/${photo}`} // ✅ prepend / to load from public/
                         alt={`${rooms.title} ${index + 1}`}
-                        className="w-100 h-[280px] object-cover"
+                        className="w-full h-[280px] object-cover"
                       />
                     </SwiperSlide>
                   ))}
                 </Swiper>
               </div>
+              <div className="bg-[#e8faff] flex gap-4 !px-4 !py-3 text-sm">
+                <span className="flex items-center gap-1">
+                  <i className="bg-white shadow rounded !py-1 !px-3 ri-user-line"></i>
+                  Adults: {rooms.Adults}
+                </span>
+                <span className="flex items-center gap-1">
+                  <i className="bg-white shadow rounded !py-1 !px-3 ri-aspect-ratio-line"></i>
+                  Size: {rooms.size}
+                </span>
+              </div>
+              {/* <Link to={`/rooms/${rooms.id}`}> */}
+              <div className="!px-6 !pt-4 !pb-4">
+                <div className="!py-4">
+                  <h3 className="text-2xl font-semibold !mb-1">
+                    {rooms.title}
+                  </h3>
+                  <p className="text-md text-gray-500">{rooms.discription}</p>
+                  <div className="border-t !mt-4 !pt-4 flex justify-between item-center">
+                    <p className="text-lg font-bold text-[#000]">
+                      ${rooms.price}
+                    </p>
+                    <button className="w-12 h-12 bg-[#23bcec] rounded-full flex item-center justify-center text-white text-xl">
+                      <i className="ri-bookmark-line flex items-center"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              {/* </Link> */}
             </div>
           ))}
+        </div>
+      </div>
+
+      <div className="about about-1 bg-[#d5f1f1] lg:!px-[12%] !px-[8%] !py-[150px] flex -items-center flex-col lg:flex-row justify-between gap-2 relative overflow-hidden">
+        <div className="section-title text-start space-y-4 relative z-[9] lg:w-1/2 w-full">
+          <span className="bg-[#d5f1f1] rounded-full !px-5 !py-2 font-bricolage tracking-wider text-sm uppercase">
+            about us
+          </span>
+          <h1 className="!pb-5 text-2xl sm:text-5xl font-semibold w-full leading-tight">
+            Why more than a million visitors chose us
+          </h1>
+          <ul className="flex flex-col gap-10">
+            <li className="flex flex-col sm:flex-row align-items-start gap-5">
+              <span className="text-2xl font-bold text-[#ecb934]">01.</span>
+              <div className="space-y-2">
+                <h4 className="ms:text-2xl text-xl font-semibold !mb-2">
+                  Ocean Oasis
+                </h4>
+                <p className="text-base md:text-lg">
+                  Dive into serenity where the waves whisper your name and the
+                  salty breeze carries your worries away. A perfect escape
+                  wrapped in nature’s charm.
+                </p>
+              </div>
+            </li>
+            <li className="flex flex-col sm:flex-row align-items-start gap-5">
+              <span className="text-2xl font-bold text-[#ecb934]">02.</span>
+              <div className="space-y-2">
+                <h4 className="ms:text-2xl text-xl font-semibold !mb-2">
+                  Beach Haven
+                </h4>
+                <p className="text-base md:text-lg">
+                  Wake up to golden sunrises and fall asleep to the lullaby of
+                  crashing waves. A paradise where luxury meets the rhythm of
+                  the ocean.
+                </p>
+              </div>
+            </li>
+            <li className="flex flex-col sm:flex-row align-items-start gap-5">
+              <span className="text-2xl font-bold text-[#ecb934]">03.</span>
+              <div className="space-y-2">
+                <h4 className="ms:text-2xl text-xl font-semibold !mb-2">
+                  Sunset Bliss
+                </h4>
+                <p className="text-base md:text-lg">
+                  Experience magical evenings bathed in hues of orange and gold.
+                  Where every sunset tells a story, and every moment becomes a
+                  memory.
+                </p>
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
     </>
