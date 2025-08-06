@@ -411,6 +411,19 @@ const Index = () => {
                 </p>
               </div>
             </li>
+            <li className="flex flex-col sm:flex-row align-items-start gap-5">
+              <span className="text-2xl font-bold text-[#ecb934]">03.</span>
+              <div className="space-y-2">
+                <h4 className="ms:text-2xl text-xl font-semibold !mb-2">
+                  Sunset Bliss
+                </h4>
+                <p className="text-base md:text-lg">
+                  Experience magical evenings bathed in hues of orange and gold.
+                  Where every sunset tells a story, and every moment becomes a
+                  memory.
+                </p>
+              </div>
+            </li>
           </ul>
         </div>
       </div>
