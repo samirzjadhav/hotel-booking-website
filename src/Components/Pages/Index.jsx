@@ -363,9 +363,9 @@ const Index = () => {
         </div>
       </div>
 
-      <div className="about about-1 bg-[#d5f1f1] lg:!px-[12%] !px-[8%] !py-[150px] flex -items-center flex-col lg:flex-row justify-between gap-2 relative overflow-hidden">
+      <div className="about about-1 bg-[#f3fdfd] lg:!px-[12%] !px-[8%] !py-[150px] flex -items-center flex-col lg:flex-row justify-between gap-2 relative overflow-hidden">
         <div className="section-title text-start space-y-4 relative z-[9] lg:w-1/2 w-full">
-          <span className="bg-[#d5f1f1] rounded-full !px-5 !py-2 font-bricolage tracking-wider text-sm uppercase">
+          <span className="bg-[#d5f1f1] rounded-full !px-5 !py-2 font-bricolage tracking-wider text-sm uppercase ">
             about us
           </span>
           <h1 className="!pb-5 text-2xl sm:text-5xl font-semibold w-full leading-tight">
@@ -411,20 +411,46 @@ const Index = () => {
                 </p>
               </div>
             </li>
-            <li className="flex flex-col sm:flex-row align-items-start gap-5">
-              <span className="text-2xl font-bold text-[#ecb934]">03.</span>
-              <div className="space-y-2">
-                <h4 className="ms:text-2xl text-xl font-semibold !mb-2">
-                  Sunset Bliss
-                </h4>
-                <p className="text-base md:text-lg">
-                  Experience magical evenings bathed in hues of orange and gold.
-                  Where every sunset tells a story, and every moment becomes a
-                  memory.
-                </p>
-              </div>
-            </li>
           </ul>
+        </div>
+        <div className="lg:w-1/2 w-full">
+          <div className="about-images w-full h-full relative z-[9]">
+            <img
+              src={service1}
+              alt="service-images"
+              className="about-img about-image1"
+            />
+            <img
+              src={service2}
+              alt="service-images"
+              className="about-img about-image2"
+            />
+            <img
+              src={service3}
+              alt="service-images"
+              className="about-img about-image3"
+            />
+            <img
+              src={service4}
+              alt="service-images"
+              className="about-img about-image4"
+            />
+            <img
+              src={element1}
+              alt="element-images"
+              className="about-element1"
+            />
+            <img
+              src={element2}
+              alt="element-images"
+              className="about-element2"
+            />
+            <img
+              src={element3}
+              alt="element-images"
+              className="about-element3"
+            />
+          </div>
         </div>
       </div>
     </>
