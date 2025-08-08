@@ -25,6 +25,8 @@ import RoomsData from "../../../Rooms.json";
 
 import heroImg from "../../assets/about.png";
 
+import zigzag from "../../assets/zigzag.webp";
+
 import avatar1 from "../../assets/review-1.jpg";
 import avatar2 from "../../assets/review-2.jpg";
 import avatar3 from "../../assets/review-3.jpg";
@@ -450,6 +452,52 @@ const Index = () => {
               alt="element-images"
               className="about-element3"
             />
+          </div>
+        </div>
+      </div>
+
+      <div className="about-2 bg-[#f3fdfd] lg:!px-[12%] !px-[8%] !py-[150px] relative overflow-hidden !pb-0">
+        <div className="about flex flex-col lg:flex-row items-center justify-between gap-20 relative z-[10]">
+          {/* right hero imgae */}
+          <div className="w-full lg:w-1/2 relative z-[9]">
+            <img
+              src={heroImg}
+              alt="about"
+              className="w-full h-full object-contain relative z-1"
+            />
+          </div>
+          <div className="w-full lg:w-1/2 text-center lg:text-left">
+            <div className=" inline-block bg-[#e5f2f2] text-sm font-medium text-gray-600  !px-4 !py-1 rounded-full !mb-4 tracking-wide">
+              About Us
+            </div>
+
+            <h2 className="text-3xl.md:text-4xl font-semibold text-[#1d2b3a] !mb-4">
+              Our goal and philosophy
+            </h2>
+            <p className="text-gray-500 !mb-4">
+              We believe that every journey begins with a vision, and our
+              mission is to transform that vision into reality. Guided by
+              passion, innovation, and trust, we strive to create meaningful
+              experiences that inspire, connect, and leave a lasting impact on
+              the world around us.
+            </p>
+            <p className="text-gray-500 !mb-4">
+              We are driven by a passion to create, inspire, and connect. Our
+              philosophy is simple – put people first, dream big, and work with
+              integrity. Every step we take is guided by our belief in building
+              meaningful experiences that leave a lasting impact.
+            </p>
+            <div className="flex flex-col sm:flex-row items-center gap-4">
+              <button className="bg-[#fdc335] text-white !px-6 !py-3 rounded-full font-bold flex items-center gap-2 hover:bg-[#e6ae00] trasniton duration-300 ">
+                <img src={zigzag} className="w-[25px] h-[25px]" alt="" />
+                Get In Touch
+              </button>
+
+              <button className="text-[#1d2b3a] font-semibold flex items-center !py-1 !px-2 gap-2 hover:underline transition">
+                Book Now
+                <i className="fa-solid fa-arrow-right text-xl"></i>
+              </button>
+            </div>
           </div>
         </div>
       </div>
