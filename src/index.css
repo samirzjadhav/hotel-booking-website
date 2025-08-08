@@ -260,7 +260,7 @@ html {
 
 .about-image1 {
   position: absolute;
-  top: -190px;
+  top: 10%;
   left: 20px;
   width: 180px;
   height: 180px;
@@ -271,7 +271,7 @@ html {
 
 .about-image2 {
   position: absolute;
-  top: -240px;
+  top: 0%;
   right: 20px;
   width: 320px;
   height: 320px;
@@ -282,7 +282,7 @@ html {
 
 .about-image3 {
   position: absolute;
-  top: 90px;
+  top: 50%;
   left: 100px;
   width: 250px;
   height: 250px;
@@ -290,13 +290,155 @@ html {
   border: 8px solid var(--white-color);
   object-fit: cover;
 }
+
 .about-image4 {
   position: absolute;
-  top: 160px;
+  top: 70%;
   right: 20px;
   width: 150px;
   height: 150px;
   border-radius: 50%;
   border: 8px solid var(--white-color);
   object-fit: cover;
+}
+
+.about-element1 {
+  position: absolute;
+  top: 60px;
+  left: 220px;
+  width: 60px;
+  height: 60px;
+}
+
+.about-element2 {
+  position: absolute;
+  top: 300px;
+  right: -90px;
+  width: 60px;
+  height: 60px;
+}
+
+.about-element3 {
+  position: absolute;
+  top: 500px;
+  left: 0px;
+  width: 60px;
+  height: 60px;
+}
+
+@media screen and (max-width: 1400px) {
+  .about-image2 {
+    right: -30px;
+    width: 200px;
+    height: 200px;
+  }
+
+  .about-element2 {
+    right: -40px;
+  }
+
+  .about-image4 {
+    right: -30px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .about-img {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+
+  .about-images {
+    display: flex;
+    gap: 100px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .about-image2 {
+    right: 200px;
+    width: 250px;
+    height: 250px;
+  }
+
+  .about-element1 {
+    top: 260px;
+    left: 320px;
+  }
+
+  .about-element2 {
+    top: 20px;
+    right: 40px;
+  }
+
+  .about-element3 {
+    top: 600px;
+    left: 60px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about-img {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+
+  .about-images {
+    display: flex;
+    gap: 100px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .about-image2 {
+    right: 200px;
+    width: 250px;
+    height: 250px;
+  }
+
+  .about-element1 {
+    top: 260px;
+    left: 280px;
+  }
+
+  .about-element2 {
+    top: 20px;
+    right: -30px;
+  }
+
+  .about-element3 {
+    top: 600px;
+    left: 0px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .about-images {
+    gap: 50px;
+  }
+
+  .about-img {
+    width: 100%;
+    margin: 0;
+    height: 350px;
+  }
+
+  .about-element1 {
+    top: 350px;
+    left: 180px;
+  }
+
+  .about-element2 {
+    top: 0px;
+    right: -30px;
+  }
+
+  .about-element3 {
+    top: 700px;
+    left: 0px;
+  }
 }

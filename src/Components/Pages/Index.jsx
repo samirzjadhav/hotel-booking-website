@@ -413,7 +413,7 @@ const Index = () => {
             </li>
           </ul>
         </div>
-        <div className="lg:w-1/2 w-full">
+        <div className="lg:w-1/2 w-full about-image">
           <div className="about-images w-full h-full relative z-[9]">
             <img
               src={service1}
