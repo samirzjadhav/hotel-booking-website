@@ -457,7 +457,7 @@ const Index = () => {
       </div>
 
       <div className="about-2 bg-[#f3fdfd] lg:!px-[12%] !px-[8%] !py-[150px] relative overflow-hidden !pb-0">
-        <div className="about flex flex-col lg:flex-row items-center justify-between gap-20 relative z-[10]">
+        <div className="about flex flex-col-reverse lg:flex-row items-center justify-between gap-20 relative z-[10]">
           {/* right hero imgae */}
           <div className="w-full lg:w-1/2 relative z-[9]">
             <img
@@ -466,14 +466,13 @@ const Index = () => {
               className="w-full h-full object-contain relative z-1"
             />
           </div>
-          <div className="w-full lg:w-1/2 text-center lg:text-left">
-            <div className=" inline-block bg-[#e5f2f2] text-sm font-medium text-gray-600  !px-4 !py-1 rounded-full !mb-4 tracking-wide">
-              About Us
-            </div>
-
-            <h2 className="text-3xl.md:text-4xl font-semibold text-[#1d2b3a] !mb-4">
-              Our goal and philosophy
-            </h2>
+          <div className="w-full lg:w-1/2 text-start">
+            <span className="bg-[#d5f1f1] rounded-full !px-5 !py-2 font-bricolage tracking-wider text-sm uppercase ">
+              about us
+            </span>
+            <h1 className="!py-5 text-2xl sm:text-5xl font-semibold mx-auto leading-tight">
+              Our Goal and Philosophy
+            </h1>
             <p className="text-gray-500 !mb-4">
               We believe that every journey begins with a vision, and our
               mission is to transform that vision into reality. Guided by
@@ -487,7 +486,7 @@ const Index = () => {
               integrity. Every step we take is guided by our belief in building
               meaningful experiences that leave a lasting impact.
             </p>
-            <div className="flex flex-col sm:flex-row items-center gap-4">
+            <div className="flex w-full  sm:flex-row items-center gap-4">
               <button className="bg-[#fdc335] text-white !px-6 !py-3 rounded-full font-bold flex items-center gap-2 hover:bg-[#e6ae00] trasniton duration-300 ">
                 <img src={zigzag} className="w-[25px] h-[25px]" alt="" />
                 Get In Touch
