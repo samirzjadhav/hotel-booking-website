@@ -456,7 +456,7 @@ const Index = () => {
         </div>
       </div>
 
-      <div className="about-2 bg-[#f3fdfd] lg:!px-[12%] !px-[8%] !py-[150px] relative overflow-hidden !pb-0">
+      <div className="about-2  bg-[#f3fdfd] lg:!px-[12%] !px-[8%] !py-[150px] relative overflow-hidden !pb-0">
         <div className="about flex flex-col-reverse lg:flex-row items-center justify-between gap-20 relative z-[10]">
           {/* right hero imgae */}
           <div className="w-full lg:w-1/2 relative z-[9]">
