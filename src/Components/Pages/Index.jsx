@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Link } from "react-router-dom";
 
@@ -56,6 +56,42 @@ const Index = () => {
     activeTab === "All"
       ? RoomsData
       : RoomsData.filter((room) => room.type === activeTab);
+
+  const swiperRef = useRef(null);
+  const avatars = [avatar1, avatar2, avatar3, avatar4, avatar5, avatar6];
+
+  const testimonials = [
+    {
+      name: "Sarah Newman",
+      company: "Envato Market",
+      message:
+        "Booking through this website was a breeze! The interface was intuitive, the options were endless, and I managed to find a luxury resort at an incredible price. What I loved most was how transparent the process was—no hidden fees, no confusion. I even received a reminder email with local travel tips before my trip. This will be my go-to booking platform from now on!",
+    },
+    {
+      name: "Liam Carter",
+      company: "ThemeForest",
+      message:
+        "I travel frequently for work, and finding the right hotel quickly is essential. This website exceeded my expectations! The search filters are spot-on, the booking confirmation was instant, and my stay at the recommended hotel was exactly as described. From location to comfort, everything matched perfectly. Highly recommend for both business and leisure travelers!",
+    },
+    {
+      name: "Amelia Johnson",
+      company: "CodeCanyon",
+      message:
+        "I was planning a surprise getaway for my partner, and this platform made it so easy! Not only did I find a romantic beachfront villa within minutes, but the customer support also helped me arrange a special dinner by the sea. Everything was seamless—from booking to check-in. The entire trip felt stress-free thanks to this service.",
+    },
+    {
+      name: "Ethan Patel",
+      company: "Creative Market",
+      message:
+        "Hands down, the best hotel booking experience I've had! The website loads fast, offers great deals, and shows detailed photos so you know exactly what you're getting. I booked a 5-night stay in Bali, and everything—from amenities to service—matched the description perfectly. I’ve already recommended it to my friends and family.",
+    },
+    {
+      name: "Nora Madsen",
+      company: "Envato Market",
+      message:
+        "I was skeptical at first because I’ve had bad experiences with other booking sites, but this platform completely changed my mind. The real-time availability updates were accurate, the pricing was fair, and the hotel reviews were genuine. My vacation went exactly as planned, and I’m so glad I trusted this site with my booking!",
+    },
+  ];
 
   return (
     <>
@@ -496,6 +532,35 @@ const Index = () => {
                 Book Now
                 <i className="fa-solid fa-arrow-right text-xl"></i>
               </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-[#f9fefe] w-full">
+        <div className="w-full lg:w-[95%] mx-auto !py-12 bg-[#eafbfb] rounded-[20px] box-shadow-large relative z-[10]">
+          <div className="text-center">
+            <span className="bg-[#d5f1f1] rounded-full !px-5 !py-2 font-bricolage tracking-wider text-sm uppercase">
+              reviews
+            </span>
+            <h1 className="text-2xl  sm:text-5xl font-semibold !mt-5 w-full xl:w-[50%] mx-auto leading-tight">
+              Customer Voices : <br /> Hear What They Say!
+            </h1>
+            <div className="flex item-center justify-center space-x-4 !mb-6 !mt-6">
+              {avatars.map((avatar, index) => (
+                <img
+                  key={index}
+                  src={avatar}
+                  alt={`avatar${index}`}
+                  className={`cursor-pointer rounded-full object-cover ${
+                    activeIndex === index ? "w-16 h-16" : "w-12 h-12"
+                  } trasnition-all duration-300`}
+                  onClick={() => {
+                    setActiveIndex(index);
+                    swiperRef.current?.slideToLoop(index);
+                  }}
+                />
+              ))}
             </div>
           </div>
         </div>
