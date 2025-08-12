@@ -546,7 +546,7 @@ const Index = () => {
         </div>
       </div>
 
-      <div className="bg-[#f9fefe] w-full">
+      <div className="bg-[#f9fefe] w-full testimonials">
         <div className="w-full mx-auto !py-12 bg-[#eafbfb] rounded-[20px] box-shadow-large relative z-[10]">
           {/* lg:w-[95%] this is for w-full line */}
           <div className="text-center">
@@ -616,6 +616,238 @@ const Index = () => {
             >
               <i className="ri-arrow-right-s-line text-xl"></i>
             </button>
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-[#f3fdfd] lg:!px-[12%] !px-[8%] !py-[150px] flex flex-col items-center justify-center gap-10 z-[9] relative overflow-hidden !pt-[40px]">
+        <span className="bg-[#d5f1f1] rounded-full !px-5 !py-2 font-bricolage tracking-wider text-sm uppercase">
+          Our Blog
+        </span>
+        <h1 className="text-2xl sm:text-5xl font-semibold text-center w-full xl:w-[50%] mx-auto leading-tight">
+          Latest Blog Publication
+        </h1>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full text-left">
+          <div className="bg-white rounded-[20px] shadow-sm overflow-hidden hover:shadow-xl transition-all duration-300 group !p-4">
+            <div className="overflow-hidden rounded-t-[16px]">
+              <img
+                src={blog1}
+                alt="Beach Adventure"
+                className="w-full h-56 object-cover transform transition-transform duration-300 group-hover:scale-105"
+              />
+            </div>
+            <div className="!p-4 bg-[#f2fbfb] rounded-b-[16px]">
+              <div className="flex item-center text-sm text-gray-500 gap-2 !mb-4">
+                <img
+                  src={blog1}
+                  alt="Author"
+                  className="w-6 h-6 rounded-full object-cover"
+                />
+                <span>Pual T.</span>
+                <span className="w-1 h-1 bg-gray-400 rounded-full"></span>
+                <span>24.09.2026</span>
+              </div>
+              <h3 className="font-semibold text-xl text-[#1d2b3a] !mb-2 leading-snug">
+                Why your next amazing adventure should be on the beach
+              </h3>
+              <p className="text-gray-600 text-sm !mb-4">
+                From calming waves to golden sunsets, beach escapes are the
+                perfect blend of relaxation and adventure for your soul.
+              </p>
+              <a
+                href="#"
+                className="trext-sm font-semibold text-[#1d2b3a] inline-flex items-center group"
+              >
+                Read More
+                <span className="!ml-1 group-hover:translate-x-1 transition-transform ri-arrow-right-s-line"></span>
+              </a>
+            </div>
+          </div>
+
+          <div className="bg-white rounded-[20px] shadow-sm overflow-hidden hover:shadow-xl transition-all duration-300 group !p-4">
+            <div className="overflow-hidden rounded-t-[16px]">
+              <img
+                src={blog2}
+                alt="Travel Insurance"
+                className="w-full h-56 object-cover transform transition-transform duration-300 group-hover:scale-105"
+              />
+            </div>
+            <div className="!p-4 bg-[#f2fbfb] rounded-b-[16px]">
+              <div className="flex items-center text-sm text-gray-500 gap-2 !mb-4">
+                <img
+                  src={blog2}
+                  alt="Author"
+                  className="w-6 h-6 rounded-full object-cover"
+                />
+                <span>Aarav S.</span>
+                <span className="w-1 h-1 bg-gray-400 rounded-full"></span>
+                <span>15.04.2026</span>
+              </div>
+              <h3 className="font-semibold text-xl text-[#1d2b3a] !mb-2 leading-snug">
+                The best travel insurance companies for seniors
+              </h3>
+              <p className="text-gray-600 text-sm !mb-4">
+                Discover reliable travel insurance providers offering seniors
+                peace of mind with affordable plans and comprehensive coverage
+                worldwide.
+              </p>
+              <a
+                href="#"
+                className="trext-sm font-semibold text-[#1d2b3a] inline-flex items-center group"
+              >
+                Read More
+                <span className="!ml-1 group-hover:translate-x-1 transition-transform ri-arrow-right-s-line"></span>
+              </a>
+            </div>
+          </div>
+
+          <div className="bg-white rounded-[20px] shadow-sm overflow-hidden hover:shadow-xl transition-all duration-300 group !p-4">
+            <div className="overflow-hidden rounded-t-[16px]">
+              <img
+                src={blog3}
+                alt="Trip Planning"
+                className="w-full h-56 object-cover transform transition-transform duration-300 group-hover:scale-105"
+              />
+            </div>
+            <div className="!p-4 bg-[#f2fbfb] rounded-b-[16px]">
+              <div className="flex items-center text-sm text-gray-500 gap-2 !mb-4">
+                <img
+                  src={blog3}
+                  alt="Author"
+                  className="w-6 h-6 rounded-full object-cover"
+                />
+                <span>Maria K.</span>
+                <span className="w-1 h-1 bg-gray-400 rounded-full"></span>
+                <span>02.06.2026</span>
+              </div>
+              <h3 className="font-semibold text-xl text-[#1d2b3a] !mb-2 leading-snug">
+                18 easy steps for planning your next trip
+              </h3>
+              <p className="text-gray-600 text-sm !mb-4">
+                From budgeting to booking, follow these simple steps to turn
+                your travel dreams into a well-planned reality.
+              </p>
+              <a
+                href="#"
+                className="trext-sm font-semibold text-[#1d2b3a] inline-flex items-center group"
+              >
+                Read More
+                <span className="!ml-1 group-hover:translate-x-1 transition-transform ri-arrow-right-s-line"></span>
+              </a>
+            </div>
+          </div>
+
+          <div className="bg-white rounded-[20px] shadow-sm overflow-hidden hover:shadow-xl transition-all duration-300 group !p-4">
+            <div className="overflow-hidden rounded-t-[16px]">
+              <img
+                src={blog4}
+                alt="Desert Escape"
+                className="w-full h-56 object-cover transform transition-transform duration-300 group-hover:scale-105"
+              />
+            </div>
+            <div className="!p-4 bg-[#f2fbfb] rounded-b-[16px]">
+              <div className="flex items-center text-sm text-gray-500 gap-2 !mb-4">
+                <img
+                  src={blog4}
+                  alt="Author"
+                  className="w-6 h-6 rounded-full object-cover"
+                />
+                <span>Lucas M.</span>
+                <span className="w-1 h-1 bg-gray-400 rounded-full"></span>
+                <span>19.08.2026</span>
+              </div>
+              <h3 className="font-semibold text-xl text-[#1d2b3a] !mb-2 leading-snug">
+                Why a desert escape might be your next dream trip
+              </h3>
+              <p className="text-gray-600 text-sm !mb-4">
+                Explore vast dunes, star-filled skies, and tranquil
+                silence—desert escapes offer unique beauty and complete
+                relaxation.
+              </p>
+              <a
+                href="#"
+                className="trext-sm font-semibold text-[#1d2b3a] inline-flex items-center group"
+              >
+                Read More
+                <span className="!ml-1 group-hover:translate-x-1 transition-transform ri-arrow-right-s-line"></span>
+              </a>
+            </div>
+          </div>
+
+          {/* New Card 5 */}
+          <div className="bg-white rounded-[20px] shadow-sm overflow-hidden hover:shadow-xl transition-all duration-300 group !p-4">
+            <div className="overflow-hidden rounded-t-[16px]">
+              <img
+                src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
+                alt="Forest Retreat"
+                className="w-full h-56 object-cover transform transition-transform duration-300 group-hover:scale-105"
+              />
+            </div>
+            <div className="!p-4 bg-[#f2fbfb] rounded-b-[16px]">
+              <div className="flex items-center text-sm text-gray-500 gap-2 !mb-4">
+                <img
+                  src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
+                  alt="Author"
+                  className="w-6 h-6 rounded-full object-cover"
+                />
+                <span>Sophia R.</span>
+                <span className="w-1 h-1 bg-gray-400 rounded-full"></span>
+                <span>05.10.2026</span>
+              </div>
+              <h3 className="font-semibold text-xl text-[#1d2b3a] !mb-2 leading-snug">
+                Reconnecting with nature in a forest retreat
+              </h3>
+              <p className="text-gray-600 text-sm !mb-4">
+                Escape to lush greenery, calming streams, and fresh air—a forest
+                retreat renews your spirit and clears your mind.
+              </p>
+              <a
+                href="#"
+                className="trext-sm font-semibold text-[#1d2b3a] inline-flex items-center group"
+              >
+                Read More
+                <span className="!ml-1 group-hover:translate-x-1 transition-transform ri-arrow-right-s-line"></span>
+              </a>
+            </div>
+          </div>
+
+          {/* New Card 6 */}
+          <div className="bg-white rounded-[20px] shadow-sm overflow-hidden hover:shadow-xl transition-all duration-300 group !p-4">
+            <div className="overflow-hidden rounded-t-[16px]">
+              <img
+                src="https://images.unsplash.com/photo-1506744038136-46273834b3fb"
+                alt="Island Hopping"
+                className="w-full h-56 object-cover transform transition-transform duration-300 group-hover:scale-105"
+              />
+            </div>
+            <div className="!p-4 bg-[#f2fbfb] rounded-b-[16px]">
+              <div className="flex items-center text-sm text-gray-500 gap-2 !mb-4">
+                <img
+                  src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
+                  alt="Author"
+                  className="w-6 h-6 rounded-full object-cover"
+                />
+                <span>David P.</span>
+                <span className="w-1 h-1 bg-gray-400 rounded-full"></span>
+                <span>21.11.2026</span>
+              </div>
+              <h3 className="font-semibold text-xl text-[#1d2b3a] !mb-2 leading-snug">
+                The ultimate guide to island hopping adventures
+              </h3>
+              <p className="text-gray-600 text-sm !mb-4">
+                Discover hidden beaches, crystal-clear waters, and vibrant
+                cultures as you explore multiple islands in one unforgettable
+                journey.
+              </p>
+              <a
+                href="#"
+                className="trext-sm font-semibold text-[#1d2b3a] inline-flex items-center group"
+              >
+                Read More
+                <span className="!ml-1 group-hover:translate-x-1 transition-transform ri-arrow-right-s-line"></span>
+              </a>
+            </div>
           </div>
         </div>
       </div>
