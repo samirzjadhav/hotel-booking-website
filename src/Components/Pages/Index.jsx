@@ -50,6 +50,9 @@ const Index = () => {
 
   const [activeTab, setActiveTab] = useState("All");
 
+  const prevRef = useRef(null);
+  const nextRef = useRef(null);
+
   const tabs = ["All", "Economy", "Standard", "Luxury"];
 
   const filteredRooms =
@@ -68,16 +71,22 @@ const Index = () => {
         "Booking through this website was a breeze! The interface was intuitive, the options were endless, and I managed to find a luxury resort at an incredible price. What I loved most was how transparent the process was—no hidden fees, no confusion. I even received a reminder email with local travel tips before my trip. This will be my go-to booking platform from now on!",
     },
     {
+      name: "Amelia Johnson",
+      company: "CodeCanyon",
+      message:
+        "I was planning a surprise getaway for my partner, and this platform made it so easy! Not only did I find a romantic beachfront villa within minutes, but the customer support also helped me arrange a special dinner by the sea. Everything was seamless—from booking to check-in. The entire trip felt stress-free thanks to this service.",
+    },
+    {
       name: "Liam Carter",
       company: "ThemeForest",
       message:
         "I travel frequently for work, and finding the right hotel quickly is essential. This website exceeded my expectations! The search filters are spot-on, the booking confirmation was instant, and my stay at the recommended hotel was exactly as described. From location to comfort, everything matched perfectly. Highly recommend for both business and leisure travelers!",
     },
     {
-      name: "Amelia Johnson",
-      company: "CodeCanyon",
+      name: "Nora Madsen",
+      company: "Envato Market",
       message:
-        "I was planning a surprise getaway for my partner, and this platform made it so easy! Not only did I find a romantic beachfront villa within minutes, but the customer support also helped me arrange a special dinner by the sea. Everything was seamless—from booking to check-in. The entire trip felt stress-free thanks to this service.",
+        "I was skeptical at first because I’ve had bad experiences with other booking sites, but this platform completely changed my mind. The real-time availability updates were accurate, the pricing was fair, and the hotel reviews were genuine. My vacation went exactly as planned, and I’m so glad I trusted this site with my booking!",
     },
     {
       name: "Ethan Patel",
@@ -86,10 +95,10 @@ const Index = () => {
         "Hands down, the best hotel booking experience I've had! The website loads fast, offers great deals, and shows detailed photos so you know exactly what you're getting. I booked a 5-night stay in Bali, and everything—from amenities to service—matched the description perfectly. I’ve already recommended it to my friends and family.",
     },
     {
-      name: "Nora Madsen",
-      company: "Envato Market",
+      name: "Aarav Sharma",
+      company: "WanderStay",
       message:
-        "I was skeptical at first because I’ve had bad experiences with other booking sites, but this platform completely changed my mind. The real-time availability updates were accurate, the pricing was fair, and the hotel reviews were genuine. My vacation went exactly as planned, and I’m so glad I trusted this site with my booking!",
+        "Booking through this platform was an absolute breeze! The interface was clean and easy to navigate, and I found amazing deals I couldn’t get anywhere else. Everything from payment to check-in went smoothly, making my trip stress-free and memorable.",
     },
   ];
 
@@ -538,7 +547,8 @@ const Index = () => {
       </div>
 
       <div className="bg-[#f9fefe] w-full">
-        <div className="w-full lg:w-[95%] mx-auto !py-12 bg-[#eafbfb] rounded-[20px] box-shadow-large relative z-[10]">
+        <div className="w-full mx-auto !py-12 bg-[#eafbfb] rounded-[20px] box-shadow-large relative z-[10]">
+          {/* lg:w-[95%] this is for w-full line */}
           <div className="text-center">
             <span className="bg-[#d5f1f1] rounded-full !px-5 !py-2 font-bricolage tracking-wider text-sm uppercase">
               reviews
@@ -562,6 +572,50 @@ const Index = () => {
                 />
               ))}
             </div>
+          </div>
+          <div className="mx-auto relative ">
+            <Swiper
+              modules={[Navigation]}
+              slideperview={1}
+              loop={true}
+              onSwiper={(swiper) => (swiperRef.current = swiper)}
+              onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
+              navigation={{
+                nextEl: ".custom-next",
+                prevEl: ".custom-prev",
+              }}
+            >
+              {testimonials.map((testimonial, index) => (
+                <SwiperSlide key={index}>
+                  <div className="flex flex-col items-center text-center !px-6">
+                    <div className="text-[#ecb934] text-4xl !mb-4">“</div>
+                    <p className="text-gray-600 text-base-italic max-w-2xl">
+                      {testimonial.message}
+                    </p>
+                    <div className="!mt-4">
+                      <h4 className="font-bold text-lg text-[#1d2b3a]">
+                        {testimonial.name}
+                      </h4>
+                      <span className="text-sm uppercase tracking-wide text-gray-400">
+                        {testimonial.company}
+                      </span>
+                    </div>
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+            <button
+              ref={prevRef}
+              className="custom-prev absolute left-0 top-1/2 -translate-y-1/2 z-10 transition !py-2 !px-3 rounded-full bg-blue-300 !ml-5"
+            >
+              <i className="ri-arrow-left-s-line text-xl"></i>
+            </button>
+            <button
+              ref={nextRef}
+              className="custom-next absolute right-0 top-1/2 -translate-y-1/2 z-10 transition !py-2 !px-3 rounded-full bg-blue-300 !mr-5"
+            >
+              <i className="ri-arrow-right-s-line text-xl"></i>
+            </button>
           </div>
         </div>
       </div>
