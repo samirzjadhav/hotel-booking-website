@@ -587,7 +587,7 @@ const Index = () => {
             >
               {testimonials.map((testimonial, index) => (
                 <SwiperSlide key={index}>
-                  <div className="flex flex-col items-center text-center !px-6">
+                  <div className="flex flex-col items-center text-center !px-6 !py-2">
                     <div className="text-[#ecb934] text-4xl !mb-4">“</div>
                     <p className="text-gray-600 text-base-italic max-w-2xl">
                       {testimonial.message}
@@ -606,13 +606,13 @@ const Index = () => {
             </Swiper>
             <button
               ref={prevRef}
-              className="custom-prev absolute left-0 top-1/2 -translate-y-1/2 z-10 transition !py-2 !px-3 rounded-full bg-blue-300 !ml-5"
+              className="custom-prev absolute left-0 top-1/2 -translate-y-1/2 z-10 transition !py-2 !px-3 rounded-full bg-blue-300 sm:!ml-5"
             >
               <i className="ri-arrow-left-s-line text-xl"></i>
             </button>
             <button
               ref={nextRef}
-              className="custom-next absolute right-0 top-1/2 -translate-y-1/2 z-10 transition !py-2 !px-3 rounded-full bg-blue-300 !mr-5"
+              className="custom-next absolute right-0 top-1/2 -translate-y-1/2 z-10 transition !py-2 !px-3 rounded-full bg-blue-300 md:!mr-5"
             >
               <i className="ri-arrow-right-s-line text-xl"></i>
             </button>
