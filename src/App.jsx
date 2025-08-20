@@ -12,6 +12,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Index />} />
         </Routes>
+        <Footer />
       </Router>
     </>
   );
