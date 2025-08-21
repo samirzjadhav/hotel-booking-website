@@ -23,9 +23,12 @@ const Footer = () => {
                 Subscribe our newsletter:
               </p>
               <div className="!mt-5 flex item-center bg-blue-50 !px-5 !py-3 w-full max-w-md rounded-full">
-                <div className="input bg-transparent flex-1 outline-none placeholder:text-gray-600 text-sm">
-                  <i className="ri-arrow-right-line text-xl bg-yellow-300 !w-[40px] !h-[40px] flex items-center justify-center rounded-full cursor-pointer"></i>
-                </div>
+                <input
+                  text="text"
+                  placeholder="Enter Your E-mail"
+                  className="input bg-transparent flex-1 outline-none justify-end flex placeholder:text-gray-600 text-sm"
+                />
+                <i className="ri-arrow-right-line text-xl bg-yellow-300 !w-[40px] !h-[40px] flex items-center justify-center rounded-full cursor-pointer"></i>
               </div>
             </div>
             <div className="lg:w-6/12">
