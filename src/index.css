@@ -459,4 +459,50 @@ html {
   left: -33%;
 }
 
+.section-banner {
+  width: 100%;
+  height: 90vh;
+}
 
+.section-banner::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(assets/section-element.png);
+  background-position: center center;
+  background-size: cover;
+  opacity: 0.4;
+  z-index: -1;
+}
+
+.section-banner-element-1 {
+  transform: translateX(-40%) rotate(30deg);
+  z-index: -1;
+}
+
+.section-banner-element-2 {
+  transform: translateX(50%) rotate(-30deg);
+  z-index: -1;
+}
+
+.section-banner-element-3,
+.section-banner-element-4,
+.section-banner-element-5 {
+  top: 25%;
+  left: 50%;
+  width: 70px;
+  height: 70px;
+}
+
+.section-banner-element-4 {
+  top: 70%;
+  left: 80%;
+}
+
+.section-banner-element-5 {
+  top: 70%;
+  left: 15%;
+}
