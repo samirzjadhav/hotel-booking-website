@@ -51,6 +51,20 @@ const About = () => {
           </div>
         </div>
       </div>
+      <div className="bg-[#f9fefe] !py-[80px] !px-[5%] w-full !pb-0 ">
+        <div className="w-full !p-[100px] bg-white rounded-[20px] shadow-2xl relative z-[10]">
+          <div className="mx-auto">
+            <div className="!mb-12">
+              <div className="bg-[#d5f1f1] text-xs !px-4 !py-1 rounded-full uppercase tracking-widset text-gray-600">
+                About Us
+              </div>
+              <h2 className="text-3xl sm:text-4xl font-semibold mt-4 text-[#1d2b3a]">
+                Story about us
+              </h2>
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   );
 };
