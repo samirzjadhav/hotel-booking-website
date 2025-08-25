@@ -51,16 +51,52 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div className="bg-[#f9fefe] !py-[80px] !px-[5%] w-full !pb-0 ">
+      <div className="bg-[#f9fefe] !py-[80px] !px-[5%] w-full !pb-0">
         <div className="w-full !p-[100px] bg-white rounded-[20px] shadow-2xl relative z-[10]">
           <div className="mx-auto">
-            <div className="!mb-12">
-              <div className="bg-[#d5f1f1] text-xs !px-4 !py-1 rounded-full uppercase tracking-widset text-gray-600">
+            {/* Heading Section */}
+            <div className="!mb-12 text-center lg:text-left">
+              <div className="bg-[#d5f1f1] text-xs !px-4 !py-1 rounded-full uppercase tracking-widest text-gray-600 inline-block">
                 About Us
               </div>
               <h2 className="text-3xl sm:text-4xl font-semibold mt-4 text-[#1d2b3a]">
-                Story about us
+                Story About Us
               </h2>
+            </div>
+
+            {/* Content Grid */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 text-[#1d2b3a] leading-relaxed text-[15px]">
+              {/* Left Side */}
+              <div>
+                <p className="!mb-5 text-gray-700">
+                  We started our journey with a simple idea — to create
+                  meaningful digital experiences that connect people and
+                  businesses. What began as a small initiative has now grown
+                  into a passionate team of creators, designers, and developers.
+                </p>
+                <p className="!mb-5 text-gray-700">
+                  Over the years, we’ve worked with clients across industries,
+                  delivering solutions that are both functional and visually
+                  inspiring.
+                </p>
+              </div>
+
+              {/* Right Side */}
+              <div>
+                <p className="!mb-5 text-gray-700">
+                  Our approach is simple: listen, understand, and craft. Every
+                  project is a collaboration where your vision meets our
+                  expertise.
+                </p>
+                <p className="!mb-5 text-gray-700">
+                  We believe in transparency, creativity, and innovation, which
+                  reflect in everything we build.
+                </p>
+                <p className="!mb-8 text-gray-700">
+                  Today, we continue to push boundaries, aiming to create
+                  designs and experiences that truly make an impact.
+                </p>
+              </div>
             </div>
           </div>
         </div>
