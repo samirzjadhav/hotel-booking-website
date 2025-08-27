@@ -96,6 +96,18 @@ const About = () => {
                   Today, we continue to push boundaries, aiming to create
                   designs and experiences that truly make an impact.
                 </p>
+                <p className="!mb-8 text-gray-700">
+                  Today, we continue to push boundaries, aiming to create
+                  designs and experiences that truly make an impact.
+                </p>
+                <p className="!mb-8 text-gray-700">
+                  Today, we continue to push boundaries, aiming to create
+                  designs and experiences that truly make an impact.
+                </p>
+                <p className="!mb-8 text-gray-700">
+                  Today, we continue to push boundaries, aiming to create
+                  designs and experiences that truly make an impact.
+                </p>
               </div>
             </div>
           </div>
