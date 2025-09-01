@@ -1,6 +1,6 @@
 import React from "react";
 import CountUp from "react-countup";
-import aothorImg from "../../assets/faces-4.jpg";
+import authorImg from "../../assets/faces-4.jpg";
 import signatureImg from "../../assets/signature.png";
 
 import heroImg from "../../assets/about-2.png";
@@ -96,6 +96,29 @@ const About = () => {
                   Today, we continue to push boundaries, aiming to create
                   designs and experiences that truly make an impact.
                 </p>
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mt-8">
+                  <div className="flex items-center gap-4">
+                    <img
+                      src={authorImg}
+                      alt="Emma Millar"
+                      className="w-12 h-12 rounded-full object-cover"
+                    />
+                    <div className="">
+                      <div className="font-semibold text-[#1d2b3a]">
+                        Emma millar
+                      </div>
+                      <span className="text-sm text-gray-500">
+                        Hotel Administrator
+                      </span>
+                    </div>
+                  </div>
+                  <img
+                    src={signatureImg}
+                    alt="signature"
+                    className="w-32 object-container
+                  "
+                  />
+                </div>
               </div>
             </div>
           </div>
