@@ -54,7 +54,7 @@ const Nav = () => {
           </li>
           <li>
             <Link
-              to="/sevices"
+              to="/services"
               className="uppercase text-base opacity-70 hover:opacity-100 md:opacity-100 transition px-4 py-2 lg:px-0 lg:py-0"
             >
               Services
