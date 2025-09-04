@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-import heroImg from "../../assets/about-2.png"; // (if not used later, you can remove it)
 import sectionElement from "../../assets/section-element.png";
 import Element1 from "../../assets/element-1.png";
 import Element2 from "../../assets/element-2.png";
@@ -132,23 +131,26 @@ const Room = () => {
                     Size: {rooms.size}
                   </span>
                 </div>
-                {/* <Link to={`/rooms/${rooms.id}`}> */}
-                <div className="!px-6 !pt-4 !pb-4">
-                  <div className="!py-4">
-                    <h3 className="text-2xl font-semibold !mb-1">
-                      {rooms.title}
-                    </h3>
-                    <p className="text-md text-gray-500">{rooms.discription}</p>
-                    <div className="border-t !mt-4 !pt-4 flex justify-between item-center">
-                      <p className="text-lg font-bold text-[#000]">
-                        ${rooms.price}
+                <Link to={`/rooms/${rooms.id}`}>
+                  <div className="!px-6 !pt-4 !pb-4">
+                    <div className="!py-4">
+                      <h3 className="text-2xl font-semibold !mb-1">
+                        {rooms.title}
+                      </h3>
+                      <p className="text-md text-gray-500">
+                        {rooms.discription}
                       </p>
-                      <button className="w-12 h-12 bg-[#23bcec] rounded-full flex item-center justify-center text-white text-xl">
-                        <i className="ri-bookmark-line flex items-center"></i>
-                      </button>
+                      <div className="border-t !mt-4 !pt-4 flex justify-between item-center">
+                        <p className="text-lg font-bold text-[#000]">
+                          ${rooms.price}
+                        </p>
+                        <button className="w-12 h-12 bg-[#23bcec] rounded-full flex item-center justify-center text-white text-xl">
+                          <i className="ri-bookmark-line flex items-center"></i>
+                        </button>
+                      </div>
                     </div>
                   </div>
-                </div>
+                </Link>
               </div>
             ))}
           </div>
