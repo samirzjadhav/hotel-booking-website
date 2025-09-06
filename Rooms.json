@@ -9,9 +9,9 @@
     "size": "95 ft2",
     "price": 49,
     "photo": [
-      "/Images/rooms-1.jpg",
-      "/Images/rooms-1-photo-1.jpg",
-      "/Images/rooms-1-photo-2.jpg"
+      "Images/rooms-1.jpg",
+      "Images/rooms-1-photo-1.jpg",
+      "Images/rooms-1-photo-2.jpg"
     ]
   },
   {
@@ -24,10 +24,10 @@
     "size": "65 ft2",
     "price": 45,
     "photo": [
-      "/Images/rooms-2.jpg",
-      "/Images/rooms-2-photo-1.jpg",
-      "/Images/rooms-2-photo-2.jpg",
-      "/Images/rooms-2-photo-3.jpg"
+      "Images/rooms-2.jpg",
+      "Images/rooms-2-photo-1.jpg",
+      "Images/rooms-2-photo-2.jpg",
+      "Images/rooms-2-photo-3.jpg"
     ]
   },
   {
@@ -39,7 +39,7 @@
     "Adults": 3,
     "size": "95 ft2",
     "price": 59,
-    "photo": ["/Images/rooms-3.jpg", "/Images/rooms-3-photo-1.jpg"]
+    "photo": ["Images/rooms-3.jpg", "Images/rooms-3-photo-1.jpg"]
   },
   {
     "id": 4,
@@ -50,7 +50,7 @@
     "Adults": 2,
     "size": "105 ft2",
     "price": 99,
-    "photo": ["/Images/rooms-4.jpg", "/Images/rooms-4-photo-1.jpg"]
+    "photo": ["Images/rooms-4.jpg", "Images/rooms-4-photo-1.jpg"]
   },
   {
     "id": 5,
@@ -62,9 +62,9 @@
     "size": "75 ft2",
     "price": 89,
     "photo": [
-      "/Images/rooms-5.jpg",
-      "/Images/rooms-5-photo-1.jpg",
-      "/Images/rooms-5-photo-2.jpg"
+      "Images/rooms-5.jpg",
+      "Images/rooms-5-photo-1.jpg",
+      "Images/rooms-5-photo-2.jpg"
     ]
   },
   {
@@ -76,6 +76,6 @@
     "Adults": 2,
     "size": "50 ft2",
     "price": 39,
-    "photo": ["/Images/rooms-6.jpg", "/Images/rooms-6-photo-1.jpg"]
+    "photo": ["Images/rooms-6.jpg", "Images/rooms-6-photo-1.jpg"]
   }
 ]
