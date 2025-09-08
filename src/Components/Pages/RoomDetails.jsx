@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link, useParams } from "react-router-dom";
 
 import sectionElement from "../../assets/section-element.png";
@@ -32,7 +32,7 @@ const RoomDetails = () => {
   return (
     <>
       {/* Banner */}
-      <div className="section-banner !mt-20 !pt-6 relative flex items-center justify-center">
+      <div className="section-banner !mt-5 !pt-6 relative flex items-center justify-center">
         <img
           src={sectionElement}
           className="w-full h-full section-banner-element-1 absolute"
@@ -62,203 +62,159 @@ const RoomDetails = () => {
           <h1 className="text-7xl font-semibold">
             Get Your <br /> Dream Room
           </h1>
-          <div className="!mt-10 bg-[#d5f1f1] w-[250px] p-2 text-xl rounded">
+          <div className="!mt-10 bg-[#d5f1f1] w-[250px] !p-2 text-xl rounded">
             <Link to="/">Home</Link> &nbsp; / &nbsp;
-            <span className="text-gray-500">RoomsDetails</span>
+            <span className="text-gray-500">Room Details</span>
           </div>
         </div>
       </div>
 
-      <div className="w-full !py-[100px] !px-[8%] lg:!px-[12%] bg-[#f2fdfd]">
-        <h2 className="text-6xl font-bricolage font-bold !mb-4">
+      {/* Main Content */}
+      <div className="w-full !py-20 !px-8 lg:!px-20 bg-[#f2fdfd]">
+        <h2 className="text-6xl font-bricolage font-bold !mb-10">
           {room.title}
         </h2>
-        <div className="flex flex-col gap-10 items-start">
-          {/* Swiper Section */}
-          <Swiper
-            spaceBetween={30}
-            speed={1000}
-            modules={[Pagination]}
-            pagination={{ clickable: true }}
-            className="w-full h-[420px] bg-white shadow-lg rounded-xl overflow-hidden custom-swiper"
-            style={{ padding: "10px" }}
-          >
-            {room.photo.map((photo, index) => (
-              <SwiperSlide key={index}>
-                <img
-                  src={`/${photo}`}
-                  alt={`${room.title} ${index + 1}`}
-                  className="w-full h-full object-cover rounded-xl"
-                />
-              </SwiperSlide>
-            ))}
-          </Swiper>
-          <div className="!py-[50px]">
-            <h2 className="text-3xl font-bold !my-[20px]">Key Features</h2>
-            <div className="rooms-features grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
-              <div className="flex items-center gap-3 bg-white rounded-xl shadow-md !p-4">
-                <img
-                  src={feature1}
-                  alt=""
-                  className="w-[50px] h-[50px] !p-3 bg-[#d6f6ff] rounded-md"
-                />
-                <p className="font-medium text-gray-600 text-xl">
-                  Air-Conditioned
-                </p>
-              </div>
-              <div className="flex items-center gap-3 bg-white rounded-xl shadow-md !p-4">
-                <img
-                  src={feature2}
-                  alt=""
-                  className="w-[50px] h-[50px] !p-3 bg-[#d6f6ff] rounded-md"
-                />
-                <p className="font-medium text-gray-600 text-xl">Free Wi-Fi</p>
-              </div>
-              <div className="flex items-center gap-3 bg-white rounded-xl shadow-md !p-4">
-                <img
-                  src={feature3}
-                  alt=""
-                  className="w-[50px] h-[50px] !p-3 bg-[#d6f6ff] rounded-md"
-                />
-                <p className="font-medium text-gray-600 text-xl">Smart TV</p>
-              </div>
-              <div className="flex items-center gap-3 bg-white rounded-xl shadow-md !p-4">
-                <img
-                  src={feature4}
-                  alt=""
-                  className="w-[50px] h-[50px] !p-3 bg-[#d6f6ff] rounded-md"
-                />
-                <p className="font-medium text-gray-600 text-xl">
-                  Pet Friendly
-                </p>
-              </div>
-              <div className="flex items-center gap-3 bg-white rounded-xl shadow-md !p-4">
-                <img
-                  src={feature5}
-                  alt=""
-                  className="w-[50px] h-[50px] !p-3 bg-[#d6f6ff] rounded-md"
-                />
-                <p className="font-medium text-gray-600 text-xl">
-                  Free Lunches
-                </p>
-              </div>
-              <div className="flex items-center gap-3 bg-white rounded-xl shadow-md !p-4">
-                <img
-                  src={feature6}
-                  alt=""
-                  className="w-[50px] h-[50px] !p-3 bg-[#d6f6ff] rounded-md"
-                />
-                <p className="font-medium text-gray-600 text-xl">Game Room</p>
-              </div>
-            </div>
 
-            <h2 className="text-3xl font-bold !my-[20px] !pt-[30px]">
-              Description
-            </h2>
-            <p className="py-3" style={{ fontWeight: "300" }}>
-              Our rooms are designed to offer the perfect blend of comfort and
-              modern amenities, making your stay relaxing and memorable.
-            </p>
-            <p className="py-3" style={{ fontWeight: "300" }}>
-              Whether you’re here for business or leisure, you’ll enjoy
-              complimentary high-speed Wi-Fi, smart entertainment options,
-              refreshing air-conditioning, and a cozy atmosphere tailored to
-              your needs.
-            </p>
-            <p className="py-3" style={{ fontWeight: "300" }}>
-              With pet-friendly facilities, free lunches, and access to an
-              exclusive game room, our space ensures there’s something for
-              everyone to enjoy during their stay.
-            </p>
+        <div className="flex flex-col lg:flex-row !gap-10">
+          {/* Left Content */}
+          <div className="w-full lg:w-2/3 flex flex-col !gap-12">
+            {/* Swiper Section */}
+            <Swiper
+              spaceBetween={30}
+              speed={1000}
+              modules={[Pagination]}
+              pagination={{ clickable: true }}
+              className="w-full h-[420px] bg-white shadow-lg rounded-xl overflow-hidden"
+            >
+              {room.photo.map((photo, index) => (
+                <SwiperSlide key={index}>
+                  <img
+                    src={`/${photo}`}
+                    alt={`${room.title} ${index + 1}`}
+                    className="w-full h-full object-cover"
+                  />
+                </SwiperSlide>
+              ))}
+            </Swiper>
 
-            <h2 className="text-3xl font-bold !my-[20px] !pt-[30px]">
-              Amenitites
-            </h2>
-            <div className="">
-              <div className="flex flex-col lg:flex-row gap-8 items-start !mb-5">
-                <div className="w-full lg:w-2/3">
-                  <div className="bg-white !p-[40px] flex flex-col rounded-2xl shadow-lg">
+            {/* Key Features */}
+            <section>
+              <h2 className="text-3xl font-bold !mb-6">Key Features</h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 !gap-5">
+                {[
+                  { icon: feature1, text: "Air-Conditioned" },
+                  { icon: feature2, text: "Free Wi-Fi" },
+                  { icon: feature3, text: "Smart TV" },
+                  { icon: feature4, text: "Pet Friendly" },
+                  { icon: feature5, text: "Free Lunches" },
+                  { icon: feature6, text: "Game Room" },
+                ].map((f, i) => (
+                  <div
+                    key={i}
+                    className="flex items-center !gap-3 bg-white rounded-xl shadow-md !p-4"
+                  >
                     <img
-                      src={amenity1}
-                      alt=""
-                      className="w-[60px] h-[60px] !mb-7 !p-3 bg-[#d6f6ff] rounded-md"
+                      src={f.icon}
+                      alt={f.text}
+                      className="w-[50px] h-[50px] !p-3 bg-[#d6f6ff] rounded-md"
                     />
-                    <h2 className="text-3xl amenit-text font-semibold">
-                      Air-Conditioned
-                    </h2>
-                    <p className="text-gray-600 !mt-3">
-                      Stay cool and comfortable at all times with our fully
-                      air-conditioned rooms, perfect for any season.
+                    <p className="font-medium text-gray-600 text-xl">
+                      {f.text}
                     </p>
                   </div>
-                </div>
-                <div className="w-full lg:w-2/3">
-                  <div className="bg-white !p-[40px] flex flex-col rounded-2xl shadow-lg">
-                    <img
-                      src={amenity2}
-                      alt=""
-                      className="w-[60px] h-[60px] !mb-7 !p-3 bg-[#d6f6ff] rounded-md"
-                    />
-                    <h2 className="text-3xl amenit-text font-semibold">
-                      Free Wi-fi
-                    </h2>
-                    <p className="text-gray-600 !mt-3">
-                      Enjoy high-speed internet access throughout your stay,
-                      keeping you connected for work and entertainment.
-                    </p>
-                  </div>
-                </div>
+                ))}
               </div>
+            </section>
 
-              <div className="flex flex-col lg:flex-row gap-8 items-start !mb-5">
-                <div className="w-full lg:w-2/3">
-                  <div className="bg-white !p-[40px] flex flex-col rounded-2xl shadow-lg">
+            {/* Description */}
+            <section>
+              <h2 className="text-3xl font-bold !mb-6">Description</h2>
+              <p className="text-gray-600 leading-relaxed !mb-4">
+                Our rooms are designed to offer the perfect blend of comfort and
+                modern amenities, making your stay relaxing and memorable.
+              </p>
+              <p className="text-gray-600 leading-relaxed !mb-4">
+                Whether you’re here for business or leisure, you’ll enjoy
+                complimentary high-speed Wi-Fi, smart entertainment options,
+                refreshing air-conditioning, and a cozy atmosphere tailored to
+                your needs.
+              </p>
+              <p className="text-gray-600 leading-relaxed">
+                With pet-friendly facilities, free lunches, and access to an
+                exclusive game room, our space ensures there’s something for
+                everyone to enjoy during their stay.
+              </p>
+            </section>
+
+            {/* Amenities */}
+            <section>
+              <h2 className="text-3xl font-bold !mb-6">Amenities</h2>
+              <div className="grid md:grid-cols-2 !gap-8">
+                {[
+                  {
+                    icon: amenity1,
+                    title: "Air-Conditioned",
+                    desc: "Stay cool and comfortable at all times with our fully air-conditioned rooms, perfect for any season.",
+                  },
+                  {
+                    icon: amenity2,
+                    title: "Free Wi-Fi",
+                    desc: "Enjoy high-speed internet access throughout your stay, keeping you connected for work and entertainment.",
+                  },
+                  {
+                    icon: amenity3,
+                    title: "Smart TV",
+                    desc: "Enjoy your favorite shows and movies with our Smart TV, complete with streaming apps.",
+                  },
+                  {
+                    icon: amenity4,
+                    title: "Free Transfer",
+                    desc: "Enjoy complimentary transfers to and from the hotel for a hassle-free stay.",
+                  },
+                ].map((a, i) => (
+                  <div
+                    key={i}
+                    className="bg-white !p-10 flex flex-col rounded-2xl shadow-lg"
+                  >
                     <img
-                      src={amenity3}
-                      alt=""
+                      src={a.icon}
+                      alt={a.title}
                       className="w-[60px] h-[60px] !mb-7 !p-3 bg-[#d6f6ff] rounded-md"
                     />
-                    <h2 className="text-3xl amenit-text font-semibold">
-                      Smart TV
-                    </h2>
-                    <p className="text-gray-600 !mt-3">
-                      Enjoy your favorite shows and movies with our Smart TV,
-                      complete with streaming apps.
-                    </p>
+                    <h2 className="text-2xl font-semibold">{a.title}</h2>
+                    <p className="text-gray-600 !mt-3">{a.desc}</p>
                   </div>
-                </div>
-                <div className="w-full lg:w-2/3">
-                  <div className="bg-white !p-[40px] flex flex-col rounded-2xl shadow-lg">
-                    <img
-                      src={amenity4}
-                      alt=""
-                      className="w-[60px] h-[60px] !mb-7 !p-3 bg-[#d6f6ff] rounded-md"
-                    />
-                    <h2 className="text-3xl amenit-text font-semibold">
-                      Free Transfer
-                    </h2>
-                    <p className="text-gray-600 !mt-3">
-                      Enjoy complimentary transfers to and from the hotel for a
-                      hassle-free stay.
-                    </p>
-                  </div>
-                </div>
+                ))}
               </div>
-            </div>
+            </section>
 
-            <h2 className="text-3xl font-bold !my-[20px] !pt-[30px]">
-              Location
-            </h2>
-            <div className="w-full rounded-xl overflow-hidden shadow-md">
-              <iFrame
-                src="https://www.google.com/maps?q=Gateway%20of%20India%2C%20Mumbai&z=14&output=embed"
-                width="100%"
-                height="450"
-                style={{ border: 0 }}
-                allowFullScreen=""
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
+            {/* Location */}
+            <section>
+              <h2 className="text-3xl font-bold !mb-6">Location</h2>
+              <div className="w-full rounded-xl overflow-hidden shadow-md">
+                <iframe
+                  src="https://www.google.com/maps?q=Gateway%20of%20India%2C%20Mumbai&z=14&output=embed"
+                  width="100%"
+                  height="450"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="room-location"
+                />
+              </div>
+            </section>
+          </div>
+
+          {/* Sidebar */}
+          <div className="w-full lg:w-1/3 self-start sticky top-[120px]">
+            <div className="bg-white !p-8 rounded-2xl shadow-lg">
+              <div className="border-2 border-yellow-400 rounded-xl !px-6 !py-4 text-center">
+                <h2 className="text-4xl font-bold text-[#000]">
+                  <span className="text-sm">$</span> {room.price}
+                </h2>
+                <p className="text-gray-500 text-sm">/per night</p>
+              </div>
             </div>
           </div>
         </div>
