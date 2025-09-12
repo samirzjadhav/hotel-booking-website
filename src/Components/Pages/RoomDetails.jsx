@@ -205,18 +205,7 @@ const RoomDetails = () => {
               </div>
             </section>
           </div>
-
           {/* Sidebar */}
-          <div className="w-full lg:w-1/3 self-start sticky top-[120px]">
-            <div className="bg-white !p-8 rounded-2xl shadow-lg">
-              <div className="border-2 border-yellow-400 rounded-xl !px-6 !py-4 text-center">
-                <h2 className="text-4xl font-bold text-[#000]">
-                  <span className="text-sm">$</span> {room.price}
-                </h2>
-                <p className="text-gray-500 text-sm">/per night</p>
-              </div>
-            </div>
-          </div>
           <div className="w-full lg:w-1/3 self-start sticky top-[120px]">
             <div className="bg-white !p-8 rounded-2xl shadow-lg">
               <div className="border-2 border-yellow-400 rounded-xl !px-6 !py-4 text-center">
