@@ -29,6 +29,8 @@ const RoomDetails = () => {
   const { id } = useParams();
   const room = RoomData.find((room) => room.id === Number(id));
 
+  console.log(room);
+
   return (
     <>
       {/* Banner */}
@@ -208,12 +210,62 @@ const RoomDetails = () => {
           {/* Sidebar */}
           <div className="w-full lg:w-1/3 self-start sticky top-[120px]">
             <div className="bg-white !p-8 rounded-2xl shadow-lg">
+              {/* Price Section */}
               <div className="border-2 border-yellow-400 rounded-xl !px-6 !py-4 text-center">
-                <h2 className="text-4xl font-bold text-[#000]">
-                  <span className="text-sm">$</span> {room.price}
+                <h2 className="text-4xl font-bold text-black">
+                  <span className="text-sm align-top">$</span> {room.price}
                 </h2>
                 <p className="text-gray-500 text-sm">/per night</p>
               </div>
+
+              {/* Room Info */}
+              <div className="flex justify-around !py-3 rounded-xl bg-[#e8faff] text-[#1d5c63] font-medium text-sm !my-3">
+                <div className="flex items-center gap-2">
+                  <i className="ri-user-line text-lg"></i> Adults: {room.Adults}
+                </div>
+                <div className="flex items-center gap-2">
+                  <i className="ri-ruler-line text-lg"></i> Size: {room.size} m²
+                </div>
+              </div>
+
+              {/* Check-in */}
+              <div className="!mt-5">
+                <label
+                  className="block text-sm text-gray-600 !mb-1"
+                  htmlFor="checkin"
+                >
+                  CHECK-IN
+                </label>
+                <input
+                  id="checkin"
+                  type="date"
+                  className="w-full !p-3 bg-[#e8faff] rounded-md outline-none"
+                  aria-label="Check-in date"
+                />
+              </div>
+
+              {/* Check-out */}
+              <div className="!mt-5">
+                <label
+                  className="block text-sm text-gray-600 !mb-1"
+                  htmlFor="checkout"
+                >
+                  CHECK-OUT
+                </label>
+                <input
+                  id="checkout"
+                  type="date"
+                  className="w-full !p-3 bg-[#e8faff] rounded-md outline-none"
+                  aria-label="Check-out date"
+                />
+              </div>
+
+              {/* Book Button */}
+              <Link to={`/checkout/${room.id}`}>
+                <button className="w-full !py-3 bg-[#22bcec] hover:bg-[#00aee2] transition text-white text-lg rounded-full flex items-center justify-center gap-2 !mt-5">
+                  <i className="ri-bookmark-line"></i> BOOK NOW
+                </button>
+              </Link>
             </div>
           </div>
         </div>
