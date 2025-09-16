@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 
 import sectionElement from "../../assets/section-element.png";
@@ -29,7 +29,7 @@ const Checkout = () => {
   const { id } = useParams();
   const room = RoomData.find((room) => room.id === Number(id));
 
-  console.log(room);
+  const [showModal, setShowModal] = useState(false);
 
   return (
     <>
@@ -67,6 +67,85 @@ const Checkout = () => {
           <div className="!mt-10 bg-[#d5f1f1] w-[250px] !p-2 text-xl rounded">
             <Link to="/">Home</Link> &nbsp; / &nbsp;
             <span className="text-gray-500">Checkout</span>
+          </div>
+        </div>
+      </div>
+
+      {/* Booking Content */}
+      <div className="!py-[150px] !px-[8%] w-full">
+        <div className="bg-[#f7fefe] rounded-3xl shadow-md !p-10 grid grid-cols-1 lg:grid-cols-3 gap-10 items-start ">
+          {/* Form section */}
+          <div className="lg:col-span-2">
+            <h2 className="text-2xl font-semibold !mb-6">Confirm & Payment</h2>
+            <form
+              action=""
+              className="space-y-6"
+              onSubmit={(e) => {
+                e.preventDefault();
+                setShowModal(true);
+              }}
+            >
+              <div className="flex flex-col gap-3">
+                <div className="">
+                  <label
+                    htmlFor=""
+                    className="block text-sm font-semibold text-gray-600 !mb-2"
+                  >
+                    First Name
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="First Name"
+                    className="w-full !p-3 rounded-md bg-[#e8fafa] outline-noen"
+                  />
+                </div>
+                <div className="">
+                  <label
+                    htmlFor=""
+                    className="block text-sm font-semibold text-gray-600 !mb-2"
+                  >
+                    Last Name
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="Last Name"
+                    className="w-full !p-3 rounded-md bg-[#e8fafa] outline-noen"
+                  />
+                </div>
+                <div className="">
+                  <label
+                    htmlFor=""
+                    className="block text-sm font-semibold text-gray-600 !mb-2"
+                  >
+                    Email Address
+                  </label>
+                  <input
+                    type="email"
+                    placeholder="Your Email"
+                    className="w-full !p-3 rounded-md bg-[#e8fafa] outline-noen"
+                  />
+                </div>
+                <div className="">
+                  <label
+                    htmlFor=""
+                    className="block text-sm font-semibold text-gray-600 !mb-2"
+                  >
+                    Phone Number
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="Number"
+                    className="w-full !p-3 rounded-md bg-[#e8fafa] outline-noen"
+                  />
+                </div>
+              </div>
+              <button
+                type="Submit"
+                className="bg-[#1cb6be] text-white !px-6 !py-3 rounded-full font-medium !mt-4 hover:bg-[#16a3aa] transition duration-300"
+              >
+                <i className="ri-bookmark-line !mr-2"></i> Confirm and Pay
+              </button>
+            </form>
           </div>
         </div>
       </div>
