@@ -72,7 +72,7 @@ const RoomDetails = () => {
       </div>
 
       {/* Main Content */}
-      <div className="w-full !py-20 !px-8 lg:!px-20 bg-[#f2fdfd]">
+      <div className="w-full !py-20 !px-8 lg:!px-20 bg-[#f3fdfd]">
         <h2 className="text-6xl font-bricolage font-bold !mb-10">
           {room.title}
         </h2>
@@ -268,6 +268,113 @@ const RoomDetails = () => {
               </Link>
             </div>
           </div>
+        </div>
+      </div>
+
+      {/* CTA */}
+      <div className="cta !p-[50px] bg-[#df3fdfd]">
+        <div className="!py-[100px] rounded-xl bg-white shadow flex items-center justify-center">
+          <div className="section-title text-center flex items-center justify-center gap-2 flex-col">
+            <span className="bg-[#d5f1f1] rounded-full !px-5 !py-2  font-bricolage tracking-wider uppercase">
+              Call to Action
+            </span>
+            <h1 className="text-6xl font-semibold text-center">
+              Do yoy have any questions? <br /> We are available 24/7
+            </h1>
+            <div className="flex items-center justify-center !pt-[30px] gap-2">
+              <button className="w-[170px] h-[50px] bg-[#ecb934] transition hover:bg-[#ffca44] rounded-full text-white ">
+                <i className="bi bi-envelope !pe-2"></i> Get in Touch
+              </button>
+              <Link to={`/checkout/${room.id}`}>
+                <button className="w-[150px] h-[50px]">
+                  BOOK NOW <i className="ri-arrow-right-line ps-2"></i>
+                </button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Recommend */}
+      <div className="w-full !py-[100px] !px-[8%] lg:px-[12%] bg-[#f3fdfd]">
+        <div className="section-title text-start space-y-4">
+          <span className="bg-[#d5f1f1] rounded-full !px-5 !py-2 font-bricolage tracking-wider uppercase">
+            Welcome Friend
+          </span>
+          <h1 className="text-6xl font-semibold text-start !pt-[16px]">
+            We Recommend
+          </h1>
+        </div>
+        <div className="!mt-5 !pt-5">
+          <Swiper
+            slidesPerView={3.5}
+            spaceBetween={30}
+            loop={true}
+            breakpoints={{
+              1399: { slidesPerView: 3.5 },
+              1199: { slidesPerView: 2.5 },
+              991: { slidesPerView: 1 },
+              0: { slidesPerView: 1 },
+            }}
+            style={{
+              padding: "20px 0",
+            }}
+          >
+            {RoomData.map((rooms) => (
+              <SwiperSlide key={room.id}>
+                <div className="bg-white rounded-2xl shadow-md overflow-hidden show-rooms">
+                  <div className="relative">
+                    <Swiper
+                      modules={[Pagination]}
+                      pagination={{ clickable: true }}
+                      className="w-full h-[280px] custom-swiper"
+                    >
+                      {rooms.photo?.map((photo, index) => (
+                        <SwiperSlide key={index}>
+                          <img
+                            src={`/${photo}`}
+                            er
+                            alt={`${rooms.title} ${index + 1}`}
+                            className="w-full h-[280px] object-cover"
+                          />
+                        </SwiperSlide>
+                      ))}
+                    </Swiper>
+                  </div>
+                  <div className="bg-[#e8faff] flex gap-4 !px-4 !py-3 text-sm">
+                    <span className="flex items-center gap-1">
+                      <i className="bg-white shadow rounded !py-1 !px-3 ri-user-line"></i>
+                      Adults: {rooms.Adults}
+                    </span>
+                    <span className="flex items-center gap-1">
+                      <i className="bg-white shadow rounded !py-1 !px-3 ri-aspect-ratio-line"></i>
+                      Size: {rooms.size}
+                    </span>
+                  </div>
+                  <Link to={`/rooms/${rooms.id}`}>
+                    <div className="!px-6 !pt-4 !pb-4">
+                      <div className="!py-4">
+                        <h3 className="text-2xl font-semibold !mb-1">
+                          {rooms.title}
+                        </h3>
+                        <p className="text-md text-gray-500">
+                          {rooms.discription}
+                        </p>
+                        <div className="border-t !mt-4 !pt-4 flex justify-between item-center">
+                          <p className="text-lg font-bold text-[#000]">
+                            ${rooms.price}
+                          </p>
+                          <button className="w-12 h-12 bg-[#23bcec] rounded-full flex item-center justify-center text-white text-xl">
+                            <i className="ri-bookmark-line flex items-center"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </Link>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
       </div>
     </>
