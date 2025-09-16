@@ -556,3 +556,27 @@ html {
     transform: translateY(0px);
   }
 }
+
+@media (max-width: 1399px) {
+}
+@media (max-width: 1199px) {
+  .room-features {
+    grid-template-column: repeat(2, 1fr) !important;
+  }
+
+  .amenit-text {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 991px) {
+}
+@media (max-width: 767px) {
+  .cta h1 {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 575px) {
+  .room-features {
+    grid-template-column: repeat(1, 1fr) !important;
+  }
+}
