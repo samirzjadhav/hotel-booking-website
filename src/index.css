@@ -580,3 +580,22 @@ html {
     grid-template-column: repeat(1, 1fr) !important;
   }
 }
+
+/* Checkout */
+
+/* .booking-banner {
+  height: 100%;
+  padding-top: 300px;
+}
+
+.booking-banner .section-banner-element-3 {
+  top: 11% !important;
+}
+
+.booking-banner .section-banner-element-4 {
+  top: 20% !important;
+}
+
+.booking-banner .section-banner-element-5 {
+  top: 25% !important;
+} */

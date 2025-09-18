@@ -34,7 +34,7 @@ const Checkout = () => {
   return (
     <>
       {/* Banner */}
-      <div className="section-banner !mt-5 !pt-6 relative flex items-center justify-center">
+      <div className="section-banner booking-banner !mt-5 !pt-6 relative flex flex-col items-center justify-center">
         <img
           src={sectionElement}
           className="w-full h-full section-banner-element-1 absolute"
@@ -147,8 +147,67 @@ const Checkout = () => {
               </button>
             </form>
           </div>
+          {/* Booking Summary */}
+          <div className="bg-white !p-5 rounded-2xl shadow-md">
+            <img
+              src={`/${room.photo[0]}`}
+              alt=""
+              className="rounded-xl !mb-4 w-full h-[200px] object-cover"
+            />
+            <div className="flex justify-between text-sm text-gray-600 !mb-2 !px-1">
+              <div className="flex items-center gap-2">
+                <i className="ri-user-line">Adults: {room.Adults}</i>
+              </div>
+              <div className="flex items-center gap-2">
+                <i className="ri-expand-left-right-line">Adults: {room.size}</i>
+              </div>
+            </div>
+            <h3 className="h3 text-lg font-semibold text-gray-800 mt-3">
+              {room.title}
+            </h3>
+            <div className="!mt-4 space-y-3 text-sm text-gray-600 border-t border-gray-300 !pt-4">
+              <p className="flex justify-between">
+                <span>Check In Date:</span> <span>2025-09-03</span>
+              </p>
+              <p className="flex justify-between">
+                <span>Check Out Date:</span> <span>2025-09-17</span>
+              </p>
+              <p className="flex justify-between">
+                <span>Total night</span> <span>14</span>
+              </p>
+              <p className="flex justify-between font-bold text-lg">
+                <span>Total Cost</span>{" "}
+                <span className="text-[#1cb6be]">$ {room.price + 1000}</span>
+              </p>
+            </div>
+          </div>
         </div>
       </div>
+      {showModal && (
+        <div className="fixed inset-0 bg-black/40 flex items-center justify-center z-[999] ">
+          <div className="bg-white rounded-2xl !p-8 w-[90%] max-w-md shadow-lg text-center relative">
+            <h2 className="text-3xl font-bold text-[#1cb6be] !mb-4">
+              Booking Confirmed
+            </h2>
+            <p className="text-gray-600">
+              Thank you for your reservation <br /> A confirmation email has
+              been sent to you.
+            </p>
+            <button
+              className="!mt-6 bg-[#1cb6be] hover:bg-[#16a3aa] textwhite !px-6 !py-2 rounded-full"
+              onClick={() => setShowModal(false)}
+            >
+              Close
+            </button>
+            <button
+              className="absolute top-3 right-4 text-gray-500 hover:text-black text-2xl"
+              onClick={() => setShowModal(false)}
+            >
+              X
+            </button>
+          </div>
+        </div>
+      )}
     </>
   );
 };
