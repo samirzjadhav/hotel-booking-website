@@ -26,37 +26,42 @@ import feature6 from "../../assets/feature-icon-6.svg";
 const Services = () => {
   return (
     <>
-      <div className="section-banner !mt-20 !pt-6 relative flex items-center justify-center">
+      <div className="section-banner booking-banner !mt-5 !pt-6 relative flex flex-col items-center justify-center overflow-hidden">
+        {/* Background Elements */}
         <img
           src={sectionElement}
-          className="w-full h-full section-banner-element-1 absolute"
-          alt=""
+          className="w-full h-full section-banner-element-1 absolute object-cover"
+          alt="section element"
         />
         <img
           src={sectionElement}
-          className="w-full h-full section-banner-element-2 absolute"
-          alt=""
+          className="w-full h-full section-banner-element-2 absolute object-cover"
+          alt="section element"
         />
         <img
           src={Element1}
-          className="w-full h-full section-banner-element-3 absolute"
-          alt=""
+          className="w-full h-full section-banner-element-3 absolute object-contain"
+          alt="decorative element"
         />
         <img
           src={Element2}
-          className="w-full h-full section-banner-element-4 absolute"
-          alt=""
+          className="w-full h-full section-banner-element-4 absolute object-contain"
+          alt="decorative element"
         />
         <img
           src={Element3}
-          className="w-full h-full section-banner-element-5 absolute"
-          alt=""
+          className="w-full h-full section-banner-element-5 absolute object-contain"
+          alt="decorative element"
         />
-        <div className="section-banner-content flex items-center flex-col text-center z-[55]">
-          <h1 className="text-7xl font-semibold">Our Services</h1>
-          <div className="!mt-10 bg-[#d5f1f1] w-[250px] p-2 text-xl rounded">
+
+        {/* Content */}
+        <div className="section-banner-content flex items-center flex-col text-center z-[55] !px-4">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-semibold leading-tight">
+            Booking <br /> Confirmation
+          </h1>
+          <div className="!mt-6 sm:!mt-10 bg-[#d5f1f1] w-full max-w-[250px] !p-2 text-sm sm:text-base md:text-xl rounded">
             <Link to="/">Home</Link> &nbsp; / &nbsp;
-            <span className="text-gray-500">Services</span>
+            <span className="text-gray-500">Checkout</span>
           </div>
         </div>
       </div>

@@ -26,39 +26,42 @@ const Room = () => {
   return (
     <>
       {/* Banner */}
-      <div className="section-banner !mt-20 !pt-6 relative flex items-center justify-center">
+      <div className="section-banner booking-banner !mt-5 !pt-6 relative flex flex-col items-center justify-center overflow-hidden">
+        {/* Background Elements */}
         <img
           src={sectionElement}
-          className="w-full h-full section-banner-element-1 absolute"
+          className="w-full h-full section-banner-element-1 absolute object-cover"
           alt="section element"
         />
         <img
           src={sectionElement}
-          className="w-full h-full section-banner-element-2 absolute"
+          className="w-full h-full section-banner-element-2 absolute object-cover"
           alt="section element"
         />
         <img
           src={Element1}
-          className="w-full h-full section-banner-element-3 absolute"
+          className="w-full h-full section-banner-element-3 absolute object-contain"
           alt="decorative element"
         />
         <img
           src={Element2}
-          className="w-full h-full section-banner-element-4 absolute"
+          className="w-full h-full section-banner-element-4 absolute object-contain"
           alt="decorative element"
         />
         <img
           src={Element3}
-          className="w-full h-full section-banner-element-5 absolute"
+          className="w-full h-full section-banner-element-5 absolute object-contain"
           alt="decorative element"
         />
-        <div className="section-banner-content flex items-center flex-col text-center z-[55]">
-          <h1 className="text-7xl font-semibold">
-            Choose the room <br /> of your dream
+
+        {/* Content */}
+        <div className="section-banner-content flex items-center flex-col text-center z-[55] !px-4">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-semibold leading-tight">
+            Booking <br /> Confirmation
           </h1>
-          <div className="!mt-10 bg-[#d5f1f1] w-[250px] p-2 text-xl rounded">
+          <div className="!mt-6 sm:!mt-10 bg-[#d5f1f1] w-full max-w-[250px] !p-2 text-sm sm:text-base md:text-xl rounded">
             <Link to="/">Home</Link> &nbsp; / &nbsp;
-            <span className="text-gray-500">Rooms</span>
+            <span className="text-gray-500">Checkout</span>
           </div>
         </div>
       </div>
@@ -96,12 +99,12 @@ const Room = () => {
         </div>
 
         {/* Room Cards */}
-        <div className="w-full lg:!px-[12%] !pb-[100px] ">
+        <div className="w-full lg:!px-[4%] !pb-[100px]  ">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             {filteredRooms.map((rooms) => (
               <div
                 key={rooms.id}
-                className="bg-white rounded-2xl shadow-md overflow-hidden show-rooms"
+                className="bg-white rounded-2xl  shadow-md !mx-4 lg:mx-0 overflow-hidden show-rooms"
               >
                 <div className="relative">
                   <Swiper
