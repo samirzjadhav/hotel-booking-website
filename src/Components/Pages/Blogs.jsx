@@ -433,18 +433,14 @@ const Blogs = () => {
             Get the latest travel tips, exclusive deals, and destination
             inspiration straight to your inbox.
           </p>
-          <form className="flex flex-col sm:flex-row justify-center items-center gap-4">
+          <form className="max-w-xl mx-auto flex items-center justify-between bg-[#ecfafb] rounded-full overflow-hidden !p-2">
             <input
-              type="email"
-              placeholder="Enter your email"
-              className="!px-4 !py-3 rounded-lg border border-gray-300 w-full sm:w-auto "
+              text="text"
+              placeholder="Enter Your E-mail"
+              className="flex-grow !px-6 !py-2 bg-transparent text-[#1d2b3a] outline-none placeholder:text-[#1d2b3a]/70"
+              required
             />
-            <button
-              type="submit"
-              className="bg-[#2a4b5e] text-white !px-6 !py-3 rounded-lg font-semibold hover:bg-[#1d3749] transition-colors"
-            >
-              Subscribe
-            </button>
+            <i className="ri-arrow-right-line text-xl bg-yellow-300 !w-[40px] !h-[40px] flex items-center justify-center rounded-full cursor-pointer"></i>
           </form>
         </div>
       </section>
