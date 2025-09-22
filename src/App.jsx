@@ -9,6 +9,7 @@ import Room from "./Components/Pages/Room";
 import RoomDetails from "./Components/Pages/RoomDetails";
 import Checkout from "./Components/Pages/Chrckout";
 import Blogs from "./Components/Pages/Blogs";
+import Contact from "./Components/Pages/Contact";
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
           <Route path="/rooms/:id" element={<RoomDetails />}></Route>
           <Route path="/checkout/:id" element={<Checkout />}></Route>
           <Route path="/blogs" element={<Blogs />}></Route>
+          <Route path="/contact" element={<Contact />}></Route>
         </Routes>
         <Footer />
       </Router>
