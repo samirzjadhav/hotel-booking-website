@@ -45,11 +45,11 @@ const About = () => {
         {/* Content */}
         <div className="section-banner-content flex items-center flex-col text-center z-[55] !px-4">
           <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-semibold leading-tight">
-            Booking <br /> Confirmation
+            We are the largerst <br /> central hotel
           </h1>
           <div className="!mt-6 sm:!mt-10 bg-[#d5f1f1] w-full max-w-[250px] !p-2 text-sm sm:text-base md:text-xl rounded">
             <Link to="/">Home</Link> &nbsp; / &nbsp;
-            <span className="text-gray-500">Checkout</span>
+            <span className="text-gray-500">About</span>
           </div>
         </div>
       </div>
