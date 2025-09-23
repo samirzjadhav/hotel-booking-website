@@ -7,7 +7,7 @@ import About from "./Components/Pages/About";
 import Services from "./Components/Pages/Services";
 import Room from "./Components/Pages/Room";
 import RoomDetails from "./Components/Pages/RoomDetails";
-import Checkout from "./Components/Pages/Chrckout";
+import Checkout from "./Components/Pages/Checkout";
 import Blogs from "./Components/Pages/Blogs";
 import Contact from "./Components/Pages/Contact";
 
